@@ -129,3 +129,8 @@ h4 {
     width: 100%; 
 }
 
+#meuBotao {
+    width: 100px; /* Defina a largura desejada */
+    /* Outros estilos que você pode querer adicionar */
+}
+

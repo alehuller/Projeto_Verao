@@ -1791,7 +1791,7 @@
                 </div>
             </div>
             <br></br>
-            <button>Criar Partida</button>
+            <button>Registrar Partida</button>
             <br></br>
             <button>Terminar Partida</button>
         </div>
@@ -1799,21 +1799,26 @@
         <!-- Início da Seleção de Dragões -->
         <div class="container-dragoes">
             <h3>Dragões</h3>
-            <form action="#" th:action="@{/caminho_para_o_metodo_do_controlador}" th:object="${objetoDoFormulario}" method="post">
+            <form  method="post">
                 
                 <label for="colorSelect">Escolha o lado:</label>
-                <select id="colorSelect" name="colorSelect" th:field="*{color}">
+                <select id="colorSelect" name="colorSelect" >
                     <option value="blue">Blue</option>
                     <option value="red">Red</option>
                 </select>
                 
                 <label for="dragonSelect">Escolha um dragão:</label>
-                <select id="dragonSelect" name="dragonSelect" th:field="*{dragon}">
-                    <!-- As opções de dragões são preenchidas dinamicamente com o Spring Boot -->
-                    <option th:each="dragon : ${dragons}" th:value="${dragon.id}" th:text="${dragon.name}">Nome do Dragão</option>
+                <select id="dragonSelect" name="dragonSelect" >
+                    <option>Dragão das Nuvens</option>
+                    <option>Dragão da Montanha</option>
+                    <option>Dragão do Oceano</option>
+                    <option>Dragão Infernal</option>
+                    <option>Dragão Hextech</option>
+                    <option>Dragão Chemtech</option>
+                    <option>Dragão Ancião</option>
                 </select>
 
-                <button type="submit">OK</button>
+                <button type="submit" id="meuBotao">OK</button>
             </form>
         </div>
         <!-- Fim da Seleção de Dragões -->
@@ -1821,18 +1826,18 @@
         <!-- Início da Seleção de Barons -->
         <div class="container-barons">
             <h3>Barons</h3>
-            <form action="#" th:action="@{/caminho_para_o_metodo_do_controlador}" th:object="${objetoDoFormulario}" method="post">
+            <form method="post">
                 
                 <label for="teamSelect">Escolha a equipe:</label>
-                <select id="teamSelect" name="teamSelect" th:field="*{team}">
+                <select id="teamSelect" name="teamSelect">
                     <option value="red">Red</option>
                     <option value="blue">Blue</option>
                 </select>
 
                 <label for="baronCount">Número de Barons:</label>
-                <input type="number" id="baronCount" name="baronCount" th:field="*{baronCount}" min="0" value="0" />
+                <input type="number" id="baronCount" name="baronCount" min="0" value="0" />
 
-                <button type="submit">OK</button>
+                <button type="submit" id="meuBotao">OK</button>
             </form>
         </div>
         <!-- Fim da Seleção de Barons -->
@@ -1840,18 +1845,18 @@
         <!-- Início da Diferença de Ouro -->
         <div class="container-gold-diff">
             <h3>Diferença de Ouro</h3>
-            <form action="#" th:action="@{/caminho_para_o_metodo_do_controlador}" th:object="${objetoDoFormulario}" method="post">
+            <form  method="post">
                 
                 <label for="teamGoldDiff">Equipe:</label>
-                <select id="teamGoldDiff" name="teamGoldDiff" th:field="*{teamGoldDiff}">
+                <select id="teamGoldDiff" name="teamGoldDiff" >
                     <option value="red">Red</option>
                     <option value="blue">Blue</option>
                 </select>
         
                 <label for="goldDiffValue">Valor da Diferença de Ouro (ex: 4569 ou 3.5k):</label>
-                <input type="text" id="goldDiffValue" name="goldDiffValue" th:field="*{goldDiffValue}" placeholder="Digite o valor" />
+                <input type="text" id="goldDiffValue" name="goldDiffValue"  placeholder="Digite o valor" />
         
-                <button type="submit">OK</button>
+                <button type="submit" id="meuBotao">OK</button>
             </form>
         </div>
         <!-- Fim da Diferença de Ouro -->
