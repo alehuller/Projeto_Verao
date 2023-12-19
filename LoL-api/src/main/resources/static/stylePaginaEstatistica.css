@@ -79,3 +79,53 @@ button:hover {
 h4 {
     margin-right: 10px; /* Adiciona um espaçamento entre o h4 e o select, ajuste conforme necessário */
 }
+
+
+.container-dragoes {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.container-dragoes label,
+.container-dragoes select {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.container-dragoes select {
+    padding: 5px;
+}
+
+.container-barons {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.container-barons label,
+.container-barons select,
+.container-barons input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.container-barons input[type="number"] {
+    padding: 5px;
+}
+
+.container-gold-diff {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.container-gold-diff label,
+.container-gold-diff select,
+.container-gold-diff input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.container-gold-diff input[type="text"] {
+    padding: 5px;
+    width: 100%; 
+}
+

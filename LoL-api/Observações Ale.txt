@@ -1,0 +1,6 @@
+Recomendações de Mudanças
+
+- A parte dos champions invés de settar do front, puxar do back
+- Deixar a escolha do campeonato para escolher no front, tipo ter um select de campeonato que o usuário escolha,
+puxando do banco
+- A parte dos times invés de settar do front, puxar do back
