@@ -93,4 +93,102 @@ public class ControllerGeral {
         partidaAtualDAO.suppVermelho(suppVermelho);
         return "redirect:/paginaEstatisticaLck";
     }
+
+    @PostMapping("/enviarBaronAzul")
+    public String enviarBaronAzul(@ModelAttribute("baronazul") String baronAzul) throws SQLException {
+        PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+        partidaAtualDAO.baronAzul(baronAzul);
+        return "redirect:/paginaEstatisticaLck";
+    }
+
+    @PostMapping("/enviarBaronVermelho")
+    public String enviarBaronVermelho(@ModelAttribute("baronvermelho") String baronVermelho) throws SQLException {
+        PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+        partidaAtualDAO.baronVermelho(baronVermelho);
+        return "redirect:/paginaEstatisticaLck";
+    }
+
+    @PostMapping("/enviarDragao")
+    public String enviarDragao(@ModelAttribute("dragao") String dragao, @ModelAttribute("quantidade") String quantidade) throws SQLException {
+        if ("Dragao Anciao Azul".equals(dragao)) {
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.dragaoAnciaoAzul(quantidade);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Dragao Anciao Vermelho".equals(dragao)) {
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.dragaoAnciaoVermelho(quantidade);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Dragao Chemtech Azul".equals(dragao)) {
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.dragaoChemtechAzul(quantidade);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Dragao Chemtech Vermelho".equals(dragao)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.dragaoChemtechVermelho(quantidade);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Dragao Hextech Azul".equals(dragao)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.dragaoHextechAzul(quantidade);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Dragao Hextech Vermelho".equals(dragao)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.dragaoHextechVermelho(quantidade);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Dragao Infernal Azul".equals(dragao)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.dragaoInfernalAzul(quantidade);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Dragao Infernal Vermelho".equals(dragao)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.dragaoInfernalVermhelho(quantidade);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Dragao da Montanha Azul".equals(dragao)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.dragaoMontanhaAzul(quantidade);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Dragao da Montanha Vermelho".equals(dragao)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.dragaoMontanhaVermelho(quantidade);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Dragao do Oceano Azul".equals(dragao)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.dragaoOceanoAzul(quantidade);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Dragao do Oceano Vermelho".equals(dragao)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.dragaoOceanoVermelho(quantidade);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Dragao das Nuvens Azul".equals(dragao)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.dragaoNuvemAzul(quantidade);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Dragao das Nuvens Vermelho".equals(dragao)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.dragaoNuvemVermelho(quantidade);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else {
+            return "redirect:/paginaEstatisticaLck";
+        }
+    }
+
+    @PostMapping("/reset")
+    public String reset() throws SQLException {
+        PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+        partidaAtualDAO.reset();
+        return "redirect:/paginaEstatisticaLck";
+    }
 }
