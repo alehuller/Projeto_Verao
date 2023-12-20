@@ -3,7 +3,7 @@ body {
     background-image: linear-gradient(45deg, rgb(255, 255, 255), rgb(255, 255, 255));
 }
 
-div .meio-tela{
+.meio-tela {
     background-color: rgba(0, 0, 0, 0.514);
     position: absolute;
     top: 50%;
@@ -14,11 +14,12 @@ div .meio-tela{
     color: white;
 }
 
-input {
-    padding: 15px;
-    border: none;
-    outline: none;
-    font-size: 15px;
+input, select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
 }
 
 button {
@@ -29,6 +30,7 @@ button {
     border-radius: 10px;
     color: white;
     font-size: 15px;
+    margin-top: 10px;
 }
 
 button:hover {
@@ -36,101 +38,26 @@ button:hover {
     cursor: pointer;
 }
 
-.meio-tela {
-    align-items: center;
+.ajuste {
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap; 
 }
 
-.meio-tela h3, .meio-tela select {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.meio-tela h3, .meio-tela .azul {
-    display: block; /* Alterado para block para que ocupem a largura total disponível */
-    margin-bottom: 10px; /* Adicionado espaçamento entre os elementos */
-}
-
-.meio-tela .azul select {
-    display: block; /* Colocado como block para ocupar a largura total disponível */
-}
-
-.time-container {
+.time-container, .container-champions, .container-dragoes, .container-barons, .container-gold-diff {
     text-align: center;
-    flex: 1;
+    margin-bottom: 20px;
 }
 
-.azul {
+.azul, .vermelho {
     color: blue;
+    margin-bottom: 10px;
 }
 
 .vermelho {
     color: red;
 }
 
-.ajuste {
-    display: flex;
-}
-
-.container-champions {
-    display: flex;
-    align-items: center; /* Alinha verticalmente ao centro, opcional */
-}
-
 h4 {
-    margin-right: 10px; /* Adiciona um espaçamento entre o h4 e o select, ajuste conforme necessário */
+    margin-bottom: 5px;
 }
-
-
-.container-dragoes {
-    margin-top: 20px;
-    padding: 10px;
-}
-
-.container-dragoes label,
-.container-dragoes select {
-    display: block;
-    margin-bottom: 10px;
-}
-
-.container-dragoes select {
-    padding: 5px;
-}
-
-.container-barons {
-    margin-top: 20px;
-    padding: 10px;
-}
-
-.container-barons label,
-.container-barons select,
-.container-barons input {
-    display: block;
-    margin-bottom: 10px;
-}
-
-.container-barons input[type="number"] {
-    padding: 5px;
-}
-
-.container-gold-diff {
-    margin-top: 20px;
-    padding: 10px;
-}
-
-.container-gold-diff label,
-.container-gold-diff select,
-.container-gold-diff input {
-    display: block;
-    margin-bottom: 10px;
-}
-
-.container-gold-diff input[type="text"] {
-    padding: 5px;
-    width: 100%; 
-}
-
-#meuBotao {
-    width: 100px; /* Defina a largura desejada */
-    /* Outros estilos que você pode querer adicionar */
-}
-

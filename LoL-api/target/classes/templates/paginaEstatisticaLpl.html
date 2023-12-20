@@ -19,1774 +19,129 @@
             <h1>Campeonato: LPL</h1>
             <div class="ajuste">
                 <div class="time-container">
+                    <td th:text="${partidaAtual.timeAzul}"></td>
                     <h3 class="azul">Blue</h3>
-                    <select id="timeazul" name="timeazul">
-                        <option value="Anyone's Legend">Anyone's Legend</option>
-                        <option value="Bilibili Gaming">Bilibili Gaming</option>
-                        <option value="EDward Gaming">EDward Gaming</option>
-                        <option value="FunPlus Phoenix">FunPlus Phoenix</option>
-                        <option value="Invictus Gaming">Invictus Gaming</option>
-                        <option value="JD Gaming">JD Gaming</option>
-                        <option value="LGD Gaming">LGD Gaming</option>
-                        <option value="LNG Esports">LNG Esports</option>
-                        <option value="Ninjas in Pyjamas">Ninjas in Pyjamas</option>
-                        <option value="Oh My God">Oh My God</option>
-                        <option value="Rare Atom">Rare Atom</option>
-                        <option value="RNG">RNG</option>
-                        <option value="Team WE">Team WE</option>
-                        <option value="Top Esports">Top Esports</option>
-                        <option value="TT Gaming">TT Gaming</option>
-                        <option value="Ultra Prime">Ultra Prime</option>
-                        <option value="Weibo Gaming">Weibo Gaming</option>
-                    </select>
+                    <form th:action="@{/enviarTimeAzul}" method="post">
+                        <select id="timeazul" name="timeazul">
+                        </select>
+                        <button id="Enviar Time Azul" type="submit">Enviar</button>
+                    </form>
                     <br></br><br></br>
                     <h3>Campeões</h3>
                     <div class="container-champions">
                         <h4>Top</h4>
-                        <select id="top-azul" name="top-azul">
-                            <option value="Aatrox">Aatrox</option>
-                            <option value="Ahri">Ahri</option>
-                            <option value="Akali">Akali</option>
-                            <option value="Akshan">Akshan</option>
-                            <option value="Alistar">Alistar</option>
-                            <option value="Amumu">Amumu</option>
-                            <option value="Anivia">Anivia</option>
-                            <option value="Annie">Annie</option>
-                            <option value="Aphelios">Aphelios</option>
-                            <option value="Ashe">Ashe</option>
-                            <option value="Aurelion Sol">Aurelion Sol</option>
-                            <option value="Azir">Azir</option>
-                            <option value="Bard">Bard</option>
-                            <option value="Bel'Veth">Bel'Veth</option>
-                            <option value="Blitzcrank">Blitzcrank</option>
-                            <option value="Brand">Brand</option>
-                            <option value="Braum">Braum</option>
-                            <option value="Briar">Briar</option>
-                            <option value="Caitlyn">Caitlyn</option>
-                            <option value="Camille">Camille</option>
-                            <option value="Cassiopeia">Cassiopeia</option>
-                            <option value="Cho'Gath">Cho'Gath</option>
-                            <option value="Corki">Corki</option>
-                            <option value="Darius">Darius</option>
-                            <option value="Diana">Diana</option>
-                            <option value="Dr. Mundo">Dr. Mundo</option>
-                            <option value="Draven">Draven</option>
-                            <option value="Ekko">Ekko</option>
-                            <option value="Elise">Elise</option>
-                            <option value="Evelynn">Evelynn</option>
-                            <option value="Ezreal">Ezreal</option>
-                            <option value="Fiddlesticks">Fiddlesticks</option>
-                            <option value="Fiora">Fiora</option>
-                            <option value="Fizz">Fizz</option>
-                            <option value="Galio">Galio</option>
-                            <option value="Gangplank">Gangplank</option>
-                            <option value="Garen">Garen</option>
-                            <option value="Gnar">Gnar</option>
-                            <option value="Gragas">Gragas</option>
-                            <option value="Graves">Graves</option>
-                            <option value="Gwen">Gwen</option>
-                            <option value="Hecarim">Hecarim</option>
-                            <option value="Heimerdinger">Heimerdinger</option>
-                            <option value="Hwei">Hwei</option>
-                            <option value="Illaoi">Illaoi</option>
-                            <option value="Irelia">Irelia</option>
-                            <option value="Ivern">Ivern</option>
-                            <option value="Janna">Janna</option>
-                            <option value="Jarvan IV">Jarvan IV</option>
-                            <option value="Jax">Jax</option>
-                            <option value="Jayce">Jayce</option>
-                            <option value="Jhin">Jhin</option>
-                            <option value="Jinx">Jinx</option>
-                            <option value="K'Sante">K'Sante</option>
-                            <option value="Kai'Sa">Kai'Sa</option>
-                            <option value="Kalista">Kalista</option>
-                            <option value="Karma">Karma</option>
-                            <option value="Karthus">Karthus</option>
-                            <option value="Kassadin">Kassadin</option>
-                            <option value="Katarina">Katarina</option>
-                            <option value="Kayle">Kayle</option>
-                            <option value="Kayn">Kayn</option>
-                            <option value="Kennen">Kennen</option>
-                            <option value="Kha'Zix">Kha'Zix</option>
-                            <option value="Kindred">Kindred</option>
-                            <option value="Kled">Kled</option>
-                            <option value="Kog'Maw">Kog'Maw</option>
-                            <option value="LeBlanc">LeBlanc</option>
-                            <option value="Lee Sin">Lee Sin</option>
-                            <option value="Leona">Leona</option>
-                            <option value="Lillia">Lillia</option>
-                            <option value="Lissandra">Lissandra</option>
-                            <option value="Lucian">Lucian</option>
-                            <option value="Lulu">Lulu</option>
-                            <option value="Lux">Lux</option>
-                            <option value="Malphite">Malphite</option>
-                            <option value="Malzahar">Malzahar</option>
-                            <option value="Maokai">Maokai</option>
-                            <option value="Master Yi">Master Yi</option>
-                            <option value="Milio">Milio</option>
-                            <option value="Miss Fortune">Miss Fortune</option>
-                            <option value="Mordekaiser">Mordekaiser</option>
-                            <option value="Morgana">Morgana</option>
-                            <option value="Naafiri">Naafiri</option>
-                            <option value="Nami">Nami</option>
-                            <option value="Nasus">Nasus</option>
-                            <option value="Nautilus">Nautilus</option>
-                            <option value="Neeko">Neeko</option>
-                            <option value="Nidalee">Nidalee</option>
-                            <option value="Nilah">Nilah</option>
-                            <option value="Nocturne">Nocturne</option>
-                            <option value="Nunu & Willump">Nunu & Willump</option>
-                            <option value="Olaf">Olaf</option>
-                            <option value="Orianna">Orianna</option>
-                            <option value="Ornn">Ornn</option>
-                            <option value="Pantheon">Pantheon</option>
-                            <option value="Poppy">Poppy</option>
-                            <option value="Pyke">Pyke</option>
-                            <option value="Qiyana">Qiyana</option>
-                            <option value="Quinn">Quinn</option>
-                            <option value="Rakan">Rakan</option>
-                            <option value="Rammus">Rammus</option>
-                            <option value="Rek'Sai">Rek'Sai</option>
-                            <option value="Rell">Rell</option>
-                            <option value="Renata Glasc">Renata Glasc</option>
-                            <option value="Renekton">Renekton</option>
-                            <option value="Rengar">Rengar</option>
-                            <option value="Riven">Riven</option>
-                            <option value="Rumble">Rumble</option>
-                            <option value="Ryze">Ryze</option>
-                            <option value="Samira">Samira</option>
-                            <option value="Sejuani">Sejuani</option>
-                            <option value="Senna">Senna</option>
-                            <option value="Seraphine">Seraphine</option>
-                            <option value="Sett">Sett</option>
-                            <option value="Shaco">Shaco</option>
-                            <option value="Shen">Shen</option>
-                            <option value="Shyvana">Shyvana</option>
-                            <option value="Singed">Singed</option>
-                            <option value="Sion">Sion</option>
-                            <option value="Sivir">Sivir</option>
-                            <option value="Skarner">Skarner</option>
-                            <option value="Sona">Sona</option>
-                            <option value="Soraka">Soraka</option>
-                            <option value="Swain">Swain</option>
-                            <option value="Sylas">Sylas</option>
-                            <option value="Syndra">Syndra</option>
-                            <option value="Tahm Kench">Tahm Kench</option>
-                            <option value="Taliyah">Taliyah</option>
-                            <option value="Talon">Talon</option>
-                            <option value="Taric">Taric</option>
-                            <option value="Senna">Senna</option>
-                            <option value="Teemo">Teemo</option>
-                            <option value="Thresh">Thresh</option>
-                            <option value="Tristana">Tristana</option>
-                            <option value="Trundle">Trundle</option>
-                            <option value="Tryndamere">Tryndamere</option>
-                            <option value="Twisted Fate">Twisted Fate</option>
-                            <option value="Twitch">Twitch</option>
-                            <option value="Udyr">Udyr</option>
-                            <option value="Urgot">Urgot</option>
-                            <option value="Varus">Varus</option>
-                            <option value="Vayne">Vayne</option>
-                            <option value="Veigar">Veigar</option>
-                            <option value="Vel'Koz">Vel'Koz</option>
-                            <option value="Vex">Vex</option>
-                            <option value="Vi">Vi</option>
-                            <option value="Viego">Viego</option>
-                            <option value="Viktor">Viktor</option>
-                            <option value="Vladimir">Vladimir</option>
-                            <option value="Volibear">Volibear</option>
-                            <option value="Warwick">Warwick</option>
-                            <option value="Wukong">Wukong</option>
-                            <option value="Xayah">Xayah</option>
-                            <option value="Xerath">Xerath</option>
-                            <option value="Xin Zhao">Xin Zhao</option>
-                            <option value="Yasuo">Yasuo</option>
-                            <option value="Yone">Yone</option>
-                            <option value="Yorick">Yorick</option>
-                            <option value="Yuumi">Yuumi</option>
-                            <option value="Zac">Zac</option>
-                            <option value="Zed">Zed</option>
-                            <option value="Zeri">Zeri</option>
-                            <option value="Ziggs">Ziggs</option>
-                            <option value="Zilean">Zilean</option>
-                            <option value="Zoe">Zoe</option>
-                            <option value="Zyra">Zyra</option>
-                        </select>
+                        <td th:text="${partidaAtual.topAzul}"></td>
+                        <form th:action="@{/enviarTopAzul}" method="post">
+                            <select id="topazul" name="topazul"> 
+                            </select>
+                            <button id="Enviar Top Azul" type="submit">Enviar</button>
+                        </form>
                     </div>
                     <div class="container-champions">
                         <h4>Jungle</h4>
-                        <select id="jungle-azul" name="jungle-azul">
-                            <option value="Aatrox">Aatrox</option>
-                            <option value="Ahri">Ahri</option>
-                            <option value="Akali">Akali</option>
-                            <option value="Akshan">Akshan</option>
-                            <option value="Alistar">Alistar</option>
-                            <option value="Amumu">Amumu</option>
-                            <option value="Anivia">Anivia</option>
-                            <option value="Annie">Annie</option>
-                            <option value="Aphelios">Aphelios</option>
-                            <option value="Ashe">Ashe</option>
-                            <option value="Aurelion Sol">Aurelion Sol</option>
-                            <option value="Azir">Azir</option>
-                            <option value="Bard">Bard</option>
-                            <option value="Bel'Veth">Bel'Veth</option>
-                            <option value="Blitzcrank">Blitzcrank</option>
-                            <option value="Brand">Brand</option>
-                            <option value="Braum">Braum</option>
-                            <option value="Briar">Briar</option>
-                            <option value="Caitlyn">Caitlyn</option>
-                            <option value="Camille">Camille</option>
-                            <option value="Cassiopeia">Cassiopeia</option>
-                            <option value="Cho'Gath">Cho'Gath</option>
-                            <option value="Corki">Corki</option>
-                            <option value="Darius">Darius</option>
-                            <option value="Diana">Diana</option>
-                            <option value="Dr. Mundo">Dr. Mundo</option>
-                            <option value="Draven">Draven</option>
-                            <option value="Ekko">Ekko</option>
-                            <option value="Elise">Elise</option>
-                            <option value="Evelynn">Evelynn</option>
-                            <option value="Ezreal">Ezreal</option>
-                            <option value="Fiddlesticks">Fiddlesticks</option>
-                            <option value="Fiora">Fiora</option>
-                            <option value="Fizz">Fizz</option>
-                            <option value="Galio">Galio</option>
-                            <option value="Gangplank">Gangplank</option>
-                            <option value="Garen">Garen</option>
-                            <option value="Gnar">Gnar</option>
-                            <option value="Gragas">Gragas</option>
-                            <option value="Graves">Graves</option>
-                            <option value="Gwen">Gwen</option>
-                            <option value="Hecarim">Hecarim</option>
-                            <option value="Heimerdinger">Heimerdinger</option>
-                            <option value="Hwei">Hwei</option>
-                            <option value="Illaoi">Illaoi</option>
-                            <option value="Irelia">Irelia</option>
-                            <option value="Ivern">Ivern</option>
-                            <option value="Janna">Janna</option>
-                            <option value="Jarvan IV">Jarvan IV</option>
-                            <option value="Jax">Jax</option>
-                            <option value="Jayce">Jayce</option>
-                            <option value="Jhin">Jhin</option>
-                            <option value="Jinx">Jinx</option>
-                            <option value="K'Sante">K'Sante</option>
-                            <option value="Kai'Sa">Kai'Sa</option>
-                            <option value="Kalista">Kalista</option>
-                            <option value="Karma">Karma</option>
-                            <option value="Karthus">Karthus</option>
-                            <option value="Kassadin">Kassadin</option>
-                            <option value="Katarina">Katarina</option>
-                            <option value="Kayle">Kayle</option>
-                            <option value="Kayn">Kayn</option>
-                            <option value="Kennen">Kennen</option>
-                            <option value="Kha'Zix">Kha'Zix</option>
-                            <option value="Kindred">Kindred</option>
-                            <option value="Kled">Kled</option>
-                            <option value="Kog'Maw">Kog'Maw</option>
-                            <option value="LeBlanc">LeBlanc</option>
-                            <option value="Lee Sin">Lee Sin</option>
-                            <option value="Leona">Leona</option>
-                            <option value="Lillia">Lillia</option>
-                            <option value="Lissandra">Lissandra</option>
-                            <option value="Lucian">Lucian</option>
-                            <option value="Lulu">Lulu</option>
-                            <option value="Lux">Lux</option>
-                            <option value="Malphite">Malphite</option>
-                            <option value="Malzahar">Malzahar</option>
-                            <option value="Maokai">Maokai</option>
-                            <option value="Master Yi">Master Yi</option>
-                            <option value="Milio">Milio</option>
-                            <option value="Miss Fortune">Miss Fortune</option>
-                            <option value="Mordekaiser">Mordekaiser</option>
-                            <option value="Morgana">Morgana</option>
-                            <option value="Naafiri">Naafiri</option>
-                            <option value="Nami">Nami</option>
-                            <option value="Nasus">Nasus</option>
-                            <option value="Nautilus">Nautilus</option>
-                            <option value="Neeko">Neeko</option>
-                            <option value="Nidalee">Nidalee</option>
-                            <option value="Nilah">Nilah</option>
-                            <option value="Nocturne">Nocturne</option>
-                            <option value="Nunu & Willump">Nunu & Willump</option>
-                            <option value="Olaf">Olaf</option>
-                            <option value="Orianna">Orianna</option>
-                            <option value="Ornn">Ornn</option>
-                            <option value="Pantheon">Pantheon</option>
-                            <option value="Poppy">Poppy</option>
-                            <option value="Pyke">Pyke</option>
-                            <option value="Qiyana">Qiyana</option>
-                            <option value="Quinn">Quinn</option>
-                            <option value="Rakan">Rakan</option>
-                            <option value="Rammus">Rammus</option>
-                            <option value="Rek'Sai">Rek'Sai</option>
-                            <option value="Rell">Rell</option>
-                            <option value="Renata Glasc">Renata Glasc</option>
-                            <option value="Renekton">Renekton</option>
-                            <option value="Rengar">Rengar</option>
-                            <option value="Riven">Riven</option>
-                            <option value="Rumble">Rumble</option>
-                            <option value="Ryze">Ryze</option>
-                            <option value="Samira">Samira</option>
-                            <option value="Sejuani">Sejuani</option>
-                            <option value="Senna">Senna</option>
-                            <option value="Seraphine">Seraphine</option>
-                            <option value="Sett">Sett</option>
-                            <option value="Shaco">Shaco</option>
-                            <option value="Shen">Shen</option>
-                            <option value="Shyvana">Shyvana</option>
-                            <option value="Singed">Singed</option>
-                            <option value="Sion">Sion</option>
-                            <option value="Sivir">Sivir</option>
-                            <option value="Skarner">Skarner</option>
-                            <option value="Sona">Sona</option>
-                            <option value="Soraka">Soraka</option>
-                            <option value="Swain">Swain</option>
-                            <option value="Sylas">Sylas</option>
-                            <option value="Syndra">Syndra</option>
-                            <option value="Tahm Kench">Tahm Kench</option>
-                            <option value="Taliyah">Taliyah</option>
-                            <option value="Talon">Talon</option>
-                            <option value="Taric">Taric</option>
-                            <option value="Senna">Senna</option>
-                            <option value="Teemo">Teemo</option>
-                            <option value="Thresh">Thresh</option>
-                            <option value="Tristana">Tristana</option>
-                            <option value="Trundle">Trundle</option>
-                            <option value="Tryndamere">Tryndamere</option>
-                            <option value="Twisted Fate">Twisted Fate</option>
-                            <option value="Twitch">Twitch</option>
-                            <option value="Udyr">Udyr</option>
-                            <option value="Urgot">Urgot</option>
-                            <option value="Varus">Varus</option>
-                            <option value="Vayne">Vayne</option>
-                            <option value="Veigar">Veigar</option>
-                            <option value="Vel'Koz">Vel'Koz</option>
-                            <option value="Vex">Vex</option>
-                            <option value="Vi">Vi</option>
-                            <option value="Viego">Viego</option>
-                            <option value="Viktor">Viktor</option>
-                            <option value="Vladimir">Vladimir</option>
-                            <option value="Volibear">Volibear</option>
-                            <option value="Warwick">Warwick</option>
-                            <option value="Wukong">Wukong</option>
-                            <option value="Xayah">Xayah</option>
-                            <option value="Xerath">Xerath</option>
-                            <option value="Xin Zhao">Xin Zhao</option>
-                            <option value="Yasuo">Yasuo</option>
-                            <option value="Yone">Yone</option>
-                            <option value="Yorick">Yorick</option>
-                            <option value="Yuumi">Yuumi</option>
-                            <option value="Zac">Zac</option>
-                            <option value="Zed">Zed</option>
-                            <option value="Zeri">Zeri</option>
-                            <option value="Ziggs">Ziggs</option>
-                            <option value="Zilean">Zilean</option>
-                            <option value="Zoe">Zoe</option>
-                            <option value="Zyra">Zyra</option>
-                        </select>
+                        <td th:text="${partidaAtual.jungleAzul}"></td>
+                        <form th:action="@{/enviarJungleAzul}" method="post">
+                            <select id="jungleazul" name="jungleazul">
+                            </select>
+                            <button id="Enviar Jungle Azul" type="submit">Enviar</button>
+                        </form>
                     </div>
                     <div class="container-champions">
                         <h4>Mid</h4>
-                        <select id="mid-azul" name="mid-azul">
-                            <option value="Aatrox">Aatrox</option>
-                            <option value="Ahri">Ahri</option>
-                            <option value="Akali">Akali</option>
-                            <option value="Akshan">Akshan</option>
-                            <option value="Alistar">Alistar</option>
-                            <option value="Amumu">Amumu</option>
-                            <option value="Anivia">Anivia</option>
-                            <option value="Annie">Annie</option>
-                            <option value="Aphelios">Aphelios</option>
-                            <option value="Ashe">Ashe</option>
-                            <option value="Aurelion Sol">Aurelion Sol</option>
-                            <option value="Azir">Azir</option>
-                            <option value="Bard">Bard</option>
-                            <option value="Bel'Veth">Bel'Veth</option>
-                            <option value="Blitzcrank">Blitzcrank</option>
-                            <option value="Brand">Brand</option>
-                            <option value="Braum">Braum</option>
-                            <option value="Briar">Briar</option>
-                            <option value="Caitlyn">Caitlyn</option>
-                            <option value="Camille">Camille</option>
-                            <option value="Cassiopeia">Cassiopeia</option>
-                            <option value="Cho'Gath">Cho'Gath</option>
-                            <option value="Corki">Corki</option>
-                            <option value="Darius">Darius</option>
-                            <option value="Diana">Diana</option>
-                            <option value="Dr. Mundo">Dr. Mundo</option>
-                            <option value="Draven">Draven</option>
-                            <option value="Ekko">Ekko</option>
-                            <option value="Elise">Elise</option>
-                            <option value="Evelynn">Evelynn</option>
-                            <option value="Ezreal">Ezreal</option>
-                            <option value="Fiddlesticks">Fiddlesticks</option>
-                            <option value="Fiora">Fiora</option>
-                            <option value="Fizz">Fizz</option>
-                            <option value="Galio">Galio</option>
-                            <option value="Gangplank">Gangplank</option>
-                            <option value="Garen">Garen</option>
-                            <option value="Gnar">Gnar</option>
-                            <option value="Gragas">Gragas</option>
-                            <option value="Graves">Graves</option>
-                            <option value="Gwen">Gwen</option>
-                            <option value="Hecarim">Hecarim</option>
-                            <option value="Heimerdinger">Heimerdinger</option>
-                            <option value="Hwei">Hwei</option>
-                            <option value="Illaoi">Illaoi</option>
-                            <option value="Irelia">Irelia</option>
-                            <option value="Ivern">Ivern</option>
-                            <option value="Janna">Janna</option>
-                            <option value="Jarvan IV">Jarvan IV</option>
-                            <option value="Jax">Jax</option>
-                            <option value="Jayce">Jayce</option>
-                            <option value="Jhin">Jhin</option>
-                            <option value="Jinx">Jinx</option>
-                            <option value="K'Sante">K'Sante</option>
-                            <option value="Kai'Sa">Kai'Sa</option>
-                            <option value="Kalista">Kalista</option>
-                            <option value="Karma">Karma</option>
-                            <option value="Karthus">Karthus</option>
-                            <option value="Kassadin">Kassadin</option>
-                            <option value="Katarina">Katarina</option>
-                            <option value="Kayle">Kayle</option>
-                            <option value="Kayn">Kayn</option>
-                            <option value="Kennen">Kennen</option>
-                            <option value="Kha'Zix">Kha'Zix</option>
-                            <option value="Kindred">Kindred</option>
-                            <option value="Kled">Kled</option>
-                            <option value="Kog'Maw">Kog'Maw</option>
-                            <option value="LeBlanc">LeBlanc</option>
-                            <option value="Lee Sin">Lee Sin</option>
-                            <option value="Leona">Leona</option>
-                            <option value="Lillia">Lillia</option>
-                            <option value="Lissandra">Lissandra</option>
-                            <option value="Lucian">Lucian</option>
-                            <option value="Lulu">Lulu</option>
-                            <option value="Lux">Lux</option>
-                            <option value="Malphite">Malphite</option>
-                            <option value="Malzahar">Malzahar</option>
-                            <option value="Maokai">Maokai</option>
-                            <option value="Master Yi">Master Yi</option>
-                            <option value="Milio">Milio</option>
-                            <option value="Miss Fortune">Miss Fortune</option>
-                            <option value="Mordekaiser">Mordekaiser</option>
-                            <option value="Morgana">Morgana</option>
-                            <option value="Naafiri">Naafiri</option>
-                            <option value="Nami">Nami</option>
-                            <option value="Nasus">Nasus</option>
-                            <option value="Nautilus">Nautilus</option>
-                            <option value="Neeko">Neeko</option>
-                            <option value="Nidalee">Nidalee</option>
-                            <option value="Nilah">Nilah</option>
-                            <option value="Nocturne">Nocturne</option>
-                            <option value="Nunu & Willump">Nunu & Willump</option>
-                            <option value="Olaf">Olaf</option>
-                            <option value="Orianna">Orianna</option>
-                            <option value="Ornn">Ornn</option>
-                            <option value="Pantheon">Pantheon</option>
-                            <option value="Poppy">Poppy</option>
-                            <option value="Pyke">Pyke</option>
-                            <option value="Qiyana">Qiyana</option>
-                            <option value="Quinn">Quinn</option>
-                            <option value="Rakan">Rakan</option>
-                            <option value="Rammus">Rammus</option>
-                            <option value="Rek'Sai">Rek'Sai</option>
-                            <option value="Rell">Rell</option>
-                            <option value="Renata Glasc">Renata Glasc</option>
-                            <option value="Renekton">Renekton</option>
-                            <option value="Rengar">Rengar</option>
-                            <option value="Riven">Riven</option>
-                            <option value="Rumble">Rumble</option>
-                            <option value="Ryze">Ryze</option>
-                            <option value="Samira">Samira</option>
-                            <option value="Sejuani">Sejuani</option>
-                            <option value="Senna">Senna</option>
-                            <option value="Seraphine">Seraphine</option>
-                            <option value="Sett">Sett</option>
-                            <option value="Shaco">Shaco</option>
-                            <option value="Shen">Shen</option>
-                            <option value="Shyvana">Shyvana</option>
-                            <option value="Singed">Singed</option>
-                            <option value="Sion">Sion</option>
-                            <option value="Sivir">Sivir</option>
-                            <option value="Skarner">Skarner</option>
-                            <option value="Sona">Sona</option>
-                            <option value="Soraka">Soraka</option>
-                            <option value="Swain">Swain</option>
-                            <option value="Sylas">Sylas</option>
-                            <option value="Syndra">Syndra</option>
-                            <option value="Tahm Kench">Tahm Kench</option>
-                            <option value="Taliyah">Taliyah</option>
-                            <option value="Talon">Talon</option>
-                            <option value="Taric">Taric</option>
-                            <option value="Senna">Senna</option>
-                            <option value="Teemo">Teemo</option>
-                            <option value="Thresh">Thresh</option>
-                            <option value="Tristana">Tristana</option>
-                            <option value="Trundle">Trundle</option>
-                            <option value="Tryndamere">Tryndamere</option>
-                            <option value="Twisted Fate">Twisted Fate</option>
-                            <option value="Twitch">Twitch</option>
-                            <option value="Udyr">Udyr</option>
-                            <option value="Urgot">Urgot</option>
-                            <option value="Varus">Varus</option>
-                            <option value="Vayne">Vayne</option>
-                            <option value="Veigar">Veigar</option>
-                            <option value="Vel'Koz">Vel'Koz</option>
-                            <option value="Vex">Vex</option>
-                            <option value="Vi">Vi</option>
-                            <option value="Viego">Viego</option>
-                            <option value="Viktor">Viktor</option>
-                            <option value="Vladimir">Vladimir</option>
-                            <option value="Volibear">Volibear</option>
-                            <option value="Warwick">Warwick</option>
-                            <option value="Wukong">Wukong</option>
-                            <option value="Xayah">Xayah</option>
-                            <option value="Xerath">Xerath</option>
-                            <option value="Xin Zhao">Xin Zhao</option>
-                            <option value="Yasuo">Yasuo</option>
-                            <option value="Yone">Yone</option>
-                            <option value="Yorick">Yorick</option>
-                            <option value="Yuumi">Yuumi</option>
-                            <option value="Zac">Zac</option>
-                            <option value="Zed">Zed</option>
-                            <option value="Zeri">Zeri</option>
-                            <option value="Ziggs">Ziggs</option>
-                            <option value="Zilean">Zilean</option>
-                            <option value="Zoe">Zoe</option>
-                            <option value="Zyra">Zyra</option>
-                        </select>
+                        <td th:text="${partidaAtual.midAzul}"></td>
+                        <form th:action="@{/enviarMidAzul}" method="post">
+                            <select id="midazul" name="midazul">   
+                            </select>
+                            <button id="Enviar Mid Azul" type="submit">Enviar</button>
+                        </form>
                     </div>
+                    
                     <div class="container-champions">
                         <h4>ADC</h4>
-                        <select id="adc-azul" name="adc-azul">
-                            <option value="Aatrox">Aatrox</option>
-                            <option value="Ahri">Ahri</option>
-                            <option value="Akali">Akali</option>
-                            <option value="Akshan">Akshan</option>
-                            <option value="Alistar">Alistar</option>
-                            <option value="Amumu">Amumu</option>
-                            <option value="Anivia">Anivia</option>
-                            <option value="Annie">Annie</option>
-                            <option value="Aphelios">Aphelios</option>
-                            <option value="Ashe">Ashe</option>
-                            <option value="Aurelion Sol">Aurelion Sol</option>
-                            <option value="Azir">Azir</option>
-                            <option value="Bard">Bard</option>
-                            <option value="Bel'Veth">Bel'Veth</option>
-                            <option value="Blitzcrank">Blitzcrank</option>
-                            <option value="Brand">Brand</option>
-                            <option value="Braum">Braum</option>
-                            <option value="Briar">Briar</option>
-                            <option value="Caitlyn">Caitlyn</option>
-                            <option value="Camille">Camille</option>
-                            <option value="Cassiopeia">Cassiopeia</option>
-                            <option value="Cho'Gath">Cho'Gath</option>
-                            <option value="Corki">Corki</option>
-                            <option value="Darius">Darius</option>
-                            <option value="Diana">Diana</option>
-                            <option value="Dr. Mundo">Dr. Mundo</option>
-                            <option value="Draven">Draven</option>
-                            <option value="Ekko">Ekko</option>
-                            <option value="Elise">Elise</option>
-                            <option value="Evelynn">Evelynn</option>
-                            <option value="Ezreal">Ezreal</option>
-                            <option value="Fiddlesticks">Fiddlesticks</option>
-                            <option value="Fiora">Fiora</option>
-                            <option value="Fizz">Fizz</option>
-                            <option value="Galio">Galio</option>
-                            <option value="Gangplank">Gangplank</option>
-                            <option value="Garen">Garen</option>
-                            <option value="Gnar">Gnar</option>
-                            <option value="Gragas">Gragas</option>
-                            <option value="Graves">Graves</option>
-                            <option value="Gwen">Gwen</option>
-                            <option value="Hecarim">Hecarim</option>
-                            <option value="Heimerdinger">Heimerdinger</option>
-                            <option value="Hwei">Hwei</option>
-                            <option value="Illaoi">Illaoi</option>
-                            <option value="Irelia">Irelia</option>
-                            <option value="Ivern">Ivern</option>
-                            <option value="Janna">Janna</option>
-                            <option value="Jarvan IV">Jarvan IV</option>
-                            <option value="Jax">Jax</option>
-                            <option value="Jayce">Jayce</option>
-                            <option value="Jhin">Jhin</option>
-                            <option value="Jinx">Jinx</option>
-                            <option value="K'Sante">K'Sante</option>
-                            <option value="Kai'Sa">Kai'Sa</option>
-                            <option value="Kalista">Kalista</option>
-                            <option value="Karma">Karma</option>
-                            <option value="Karthus">Karthus</option>
-                            <option value="Kassadin">Kassadin</option>
-                            <option value="Katarina">Katarina</option>
-                            <option value="Kayle">Kayle</option>
-                            <option value="Kayn">Kayn</option>
-                            <option value="Kennen">Kennen</option>
-                            <option value="Kha'Zix">Kha'Zix</option>
-                            <option value="Kindred">Kindred</option>
-                            <option value="Kled">Kled</option>
-                            <option value="Kog'Maw">Kog'Maw</option>
-                            <option value="LeBlanc">LeBlanc</option>
-                            <option value="Lee Sin">Lee Sin</option>
-                            <option value="Leona">Leona</option>
-                            <option value="Lillia">Lillia</option>
-                            <option value="Lissandra">Lissandra</option>
-                            <option value="Lucian">Lucian</option>
-                            <option value="Lulu">Lulu</option>
-                            <option value="Lux">Lux</option>
-                            <option value="Malphite">Malphite</option>
-                            <option value="Malzahar">Malzahar</option>
-                            <option value="Maokai">Maokai</option>
-                            <option value="Master Yi">Master Yi</option>
-                            <option value="Milio">Milio</option>
-                            <option value="Miss Fortune">Miss Fortune</option>
-                            <option value="Mordekaiser">Mordekaiser</option>
-                            <option value="Morgana">Morgana</option>
-                            <option value="Naafiri">Naafiri</option>
-                            <option value="Nami">Nami</option>
-                            <option value="Nasus">Nasus</option>
-                            <option value="Nautilus">Nautilus</option>
-                            <option value="Neeko">Neeko</option>
-                            <option value="Nidalee">Nidalee</option>
-                            <option value="Nilah">Nilah</option>
-                            <option value="Nocturne">Nocturne</option>
-                            <option value="Nunu & Willump">Nunu & Willump</option>
-                            <option value="Olaf">Olaf</option>
-                            <option value="Orianna">Orianna</option>
-                            <option value="Ornn">Ornn</option>
-                            <option value="Pantheon">Pantheon</option>
-                            <option value="Poppy">Poppy</option>
-                            <option value="Pyke">Pyke</option>
-                            <option value="Qiyana">Qiyana</option>
-                            <option value="Quinn">Quinn</option>
-                            <option value="Rakan">Rakan</option>
-                            <option value="Rammus">Rammus</option>
-                            <option value="Rek'Sai">Rek'Sai</option>
-                            <option value="Rell">Rell</option>
-                            <option value="Renata Glasc">Renata Glasc</option>
-                            <option value="Renekton">Renekton</option>
-                            <option value="Rengar">Rengar</option>
-                            <option value="Riven">Riven</option>
-                            <option value="Rumble">Rumble</option>
-                            <option value="Ryze">Ryze</option>
-                            <option value="Samira">Samira</option>
-                            <option value="Sejuani">Sejuani</option>
-                            <option value="Senna">Senna</option>
-                            <option value="Seraphine">Seraphine</option>
-                            <option value="Sett">Sett</option>
-                            <option value="Shaco">Shaco</option>
-                            <option value="Shen">Shen</option>
-                            <option value="Shyvana">Shyvana</option>
-                            <option value="Singed">Singed</option>
-                            <option value="Sion">Sion</option>
-                            <option value="Sivir">Sivir</option>
-                            <option value="Skarner">Skarner</option>
-                            <option value="Sona">Sona</option>
-                            <option value="Soraka">Soraka</option>
-                            <option value="Swain">Swain</option>
-                            <option value="Sylas">Sylas</option>
-                            <option value="Syndra">Syndra</option>
-                            <option value="Tahm Kench">Tahm Kench</option>
-                            <option value="Taliyah">Taliyah</option>
-                            <option value="Talon">Talon</option>
-                            <option value="Taric">Taric</option>
-                            <option value="Senna">Senna</option>
-                            <option value="Teemo">Teemo</option>
-                            <option value="Thresh">Thresh</option>
-                            <option value="Tristana">Tristana</option>
-                            <option value="Trundle">Trundle</option>
-                            <option value="Tryndamere">Tryndamere</option>
-                            <option value="Twisted Fate">Twisted Fate</option>
-                            <option value="Twitch">Twitch</option>
-                            <option value="Udyr">Udyr</option>
-                            <option value="Urgot">Urgot</option>
-                            <option value="Varus">Varus</option>
-                            <option value="Vayne">Vayne</option>
-                            <option value="Veigar">Veigar</option>
-                            <option value="Vel'Koz">Vel'Koz</option>
-                            <option value="Vex">Vex</option>
-                            <option value="Vi">Vi</option>
-                            <option value="Viego">Viego</option>
-                            <option value="Viktor">Viktor</option>
-                            <option value="Vladimir">Vladimir</option>
-                            <option value="Volibear">Volibear</option>
-                            <option value="Warwick">Warwick</option>
-                            <option value="Wukong">Wukong</option>
-                            <option value="Xayah">Xayah</option>
-                            <option value="Xerath">Xerath</option>
-                            <option value="Xin Zhao">Xin Zhao</option>
-                            <option value="Yasuo">Yasuo</option>
-                            <option value="Yone">Yone</option>
-                            <option value="Yorick">Yorick</option>
-                            <option value="Yuumi">Yuumi</option>
-                            <option value="Zac">Zac</option>
-                            <option value="Zed">Zed</option>
-                            <option value="Zeri">Zeri</option>
-                            <option value="Ziggs">Ziggs</option>
-                            <option value="Zilean">Zilean</option>
-                            <option value="Zoe">Zoe</option>
-                            <option value="Zyra">Zyra</option>
-                        </select>
+                        <td th:text="${partidaAtual.adcAzul}"></td>
+                        <form th:action="@{/enviarAdcAzul}" method="post">
+                            <select id="adcazul" name="adcazul">
+                                
+                            </select>
+                            <button id="Enviar ADC Azul" type="submit">Enviar</button>
+                        </form>
                     </div>
+                    
                     <div class="container-champions">
                         <h4>Supp</h4>
-                        <select id="supp-azul" name="supp-azul">
-                            <option value="Aatrox">Aatrox</option>
-                            <option value="Ahri">Ahri</option>
-                            <option value="Akali">Akali</option>
-                            <option value="Akshan">Akshan</option>
-                            <option value="Alistar">Alistar</option>
-                            <option value="Amumu">Amumu</option>
-                            <option value="Anivia">Anivia</option>
-                            <option value="Annie">Annie</option>
-                            <option value="Aphelios">Aphelios</option>
-                            <option value="Ashe">Ashe</option>
-                            <option value="Aurelion Sol">Aurelion Sol</option>
-                            <option value="Azir">Azir</option>
-                            <option value="Bard">Bard</option>
-                            <option value="Bel'Veth">Bel'Veth</option>
-                            <option value="Blitzcrank">Blitzcrank</option>
-                            <option value="Brand">Brand</option>
-                            <option value="Braum">Braum</option>
-                            <option value="Briar">Briar</option>
-                            <option value="Caitlyn">Caitlyn</option>
-                            <option value="Camille">Camille</option>
-                            <option value="Cassiopeia">Cassiopeia</option>
-                            <option value="Cho'Gath">Cho'Gath</option>
-                            <option value="Corki">Corki</option>
-                            <option value="Darius">Darius</option>
-                            <option value="Diana">Diana</option>
-                            <option value="Dr. Mundo">Dr. Mundo</option>
-                            <option value="Draven">Draven</option>
-                            <option value="Ekko">Ekko</option>
-                            <option value="Elise">Elise</option>
-                            <option value="Evelynn">Evelynn</option>
-                            <option value="Ezreal">Ezreal</option>
-                            <option value="Fiddlesticks">Fiddlesticks</option>
-                            <option value="Fiora">Fiora</option>
-                            <option value="Fizz">Fizz</option>
-                            <option value="Galio">Galio</option>
-                            <option value="Gangplank">Gangplank</option>
-                            <option value="Garen">Garen</option>
-                            <option value="Gnar">Gnar</option>
-                            <option value="Gragas">Gragas</option>
-                            <option value="Graves">Graves</option>
-                            <option value="Gwen">Gwen</option>
-                            <option value="Hecarim">Hecarim</option>
-                            <option value="Heimerdinger">Heimerdinger</option>
-                            <option value="Hwei">Hwei</option>
-                            <option value="Illaoi">Illaoi</option>
-                            <option value="Irelia">Irelia</option>
-                            <option value="Ivern">Ivern</option>
-                            <option value="Janna">Janna</option>
-                            <option value="Jarvan IV">Jarvan IV</option>
-                            <option value="Jax">Jax</option>
-                            <option value="Jayce">Jayce</option>
-                            <option value="Jhin">Jhin</option>
-                            <option value="Jinx">Jinx</option>
-                            <option value="K'Sante">K'Sante</option>
-                            <option value="Kai'Sa">Kai'Sa</option>
-                            <option value="Kalista">Kalista</option>
-                            <option value="Karma">Karma</option>
-                            <option value="Karthus">Karthus</option>
-                            <option value="Kassadin">Kassadin</option>
-                            <option value="Katarina">Katarina</option>
-                            <option value="Kayle">Kayle</option>
-                            <option value="Kayn">Kayn</option>
-                            <option value="Kennen">Kennen</option>
-                            <option value="Kha'Zix">Kha'Zix</option>
-                            <option value="Kindred">Kindred</option>
-                            <option value="Kled">Kled</option>
-                            <option value="Kog'Maw">Kog'Maw</option>
-                            <option value="LeBlanc">LeBlanc</option>
-                            <option value="Lee Sin">Lee Sin</option>
-                            <option value="Leona">Leona</option>
-                            <option value="Lillia">Lillia</option>
-                            <option value="Lissandra">Lissandra</option>
-                            <option value="Lucian">Lucian</option>
-                            <option value="Lulu">Lulu</option>
-                            <option value="Lux">Lux</option>
-                            <option value="Malphite">Malphite</option>
-                            <option value="Malzahar">Malzahar</option>
-                            <option value="Maokai">Maokai</option>
-                            <option value="Master Yi">Master Yi</option>
-                            <option value="Milio">Milio</option>
-                            <option value="Miss Fortune">Miss Fortune</option>
-                            <option value="Mordekaiser">Mordekaiser</option>
-                            <option value="Morgana">Morgana</option>
-                            <option value="Naafiri">Naafiri</option>
-                            <option value="Nami">Nami</option>
-                            <option value="Nasus">Nasus</option>
-                            <option value="Nautilus">Nautilus</option>
-                            <option value="Neeko">Neeko</option>
-                            <option value="Nidalee">Nidalee</option>
-                            <option value="Nilah">Nilah</option>
-                            <option value="Nocturne">Nocturne</option>
-                            <option value="Nunu & Willump">Nunu & Willump</option>
-                            <option value="Olaf">Olaf</option>
-                            <option value="Orianna">Orianna</option>
-                            <option value="Ornn">Ornn</option>
-                            <option value="Pantheon">Pantheon</option>
-                            <option value="Poppy">Poppy</option>
-                            <option value="Pyke">Pyke</option>
-                            <option value="Qiyana">Qiyana</option>
-                            <option value="Quinn">Quinn</option>
-                            <option value="Rakan">Rakan</option>
-                            <option value="Rammus">Rammus</option>
-                            <option value="Rek'Sai">Rek'Sai</option>
-                            <option value="Rell">Rell</option>
-                            <option value="Renata Glasc">Renata Glasc</option>
-                            <option value="Renekton">Renekton</option>
-                            <option value="Rengar">Rengar</option>
-                            <option value="Riven">Riven</option>
-                            <option value="Rumble">Rumble</option>
-                            <option value="Ryze">Ryze</option>
-                            <option value="Samira">Samira</option>
-                            <option value="Sejuani">Sejuani</option>
-                            <option value="Senna">Senna</option>
-                            <option value="Seraphine">Seraphine</option>
-                            <option value="Sett">Sett</option>
-                            <option value="Shaco">Shaco</option>
-                            <option value="Shen">Shen</option>
-                            <option value="Shyvana">Shyvana</option>
-                            <option value="Singed">Singed</option>
-                            <option value="Sion">Sion</option>
-                            <option value="Sivir">Sivir</option>
-                            <option value="Skarner">Skarner</option>
-                            <option value="Sona">Sona</option>
-                            <option value="Soraka">Soraka</option>
-                            <option value="Swain">Swain</option>
-                            <option value="Sylas">Sylas</option>
-                            <option value="Syndra">Syndra</option>
-                            <option value="Tahm Kench">Tahm Kench</option>
-                            <option value="Taliyah">Taliyah</option>
-                            <option value="Talon">Talon</option>
-                            <option value="Taric">Taric</option>
-                            <option value="Senna">Senna</option>
-                            <option value="Teemo">Teemo</option>
-                            <option value="Thresh">Thresh</option>
-                            <option value="Tristana">Tristana</option>
-                            <option value="Trundle">Trundle</option>
-                            <option value="Tryndamere">Tryndamere</option>
-                            <option value="Twisted Fate">Twisted Fate</option>
-                            <option value="Twitch">Twitch</option>
-                            <option value="Udyr">Udyr</option>
-                            <option value="Urgot">Urgot</option>
-                            <option value="Varus">Varus</option>
-                            <option value="Vayne">Vayne</option>
-                            <option value="Veigar">Veigar</option>
-                            <option value="Vel'Koz">Vel'Koz</option>
-                            <option value="Vex">Vex</option>
-                            <option value="Vi">Vi</option>
-                            <option value="Viego">Viego</option>
-                            <option value="Viktor">Viktor</option>
-                            <option value="Vladimir">Vladimir</option>
-                            <option value="Volibear">Volibear</option>
-                            <option value="Warwick">Warwick</option>
-                            <option value="Wukong">Wukong</option>
-                            <option value="Xayah">Xayah</option>
-                            <option value="Xerath">Xerath</option>
-                            <option value="Xin Zhao">Xin Zhao</option>
-                            <option value="Yasuo">Yasuo</option>
-                            <option value="Yone">Yone</option>
-                            <option value="Yorick">Yorick</option>
-                            <option value="Yuumi">Yuumi</option>
-                            <option value="Zac">Zac</option>
-                            <option value="Zed">Zed</option>
-                            <option value="Zeri">Zeri</option>
-                            <option value="Ziggs">Ziggs</option>
-                            <option value="Zilean">Zilean</option>
-                            <option value="Zoe">Zoe</option>
-                            <option value="Zyra">Zyra</option>
-                        </select>
+                        <td th:text="${partidaAtual.suppAzul}"></td>
+                        <form th:action="@{/enviarSuppAzul}" method="post">
+                            <select id="suppazul" name="suppazul">
+                                
+                            </select>
+                            <button id="Enviar Supp Azul" type="submit">Enviar</button>
+                        </form>
                     </div>
-                </div>
 
                 <h3> X </h3>
 
                 <div class="time-container">
+                    <td th:text="${partidaAtual.timeVermelho}"></td>
                     <h3 class="vermelho">Red</h3>
-                    <select id="timevermelho" name="timevermelho">
-                        <option value="Anyone's Legend">Anyone's Legend</option>
-                        <option value="Bilibili Gaming">Bilibili Gaming</option>
-                        <option value="EDward Gaming">EDward Gaming</option>
-                        <option value="FunPlus Phoenix">FunPlus Phoenix</option>
-                        <option value="Invictus Gaming">Invictus Gaming</option>
-                        <option value="JD Gaming">JD Gaming</option>
-                        <option value="LGD Gaming">LGD Gaming</option>
-                        <option value="LNG Esports">LNG Esports</option>
-                        <option value="Ninjas in Pyjamas">Ninjas in Pyjamas</option>
-                        <option value="Oh My God">Oh My God</option>
-                        <option value="Rare Atom">Rare Atom</option>
-                        <option value="RNG">RNG</option>
-                        <option value="Team WE">Team WE</option>
-                        <option value="Top Esports">Top Esports</option>
-                        <option value="TT Gaming">TT Gaming</option>
-                        <option value="Ultra Prime">Ultra Prime</option>
-                        <option value="Weibo Gaming">Weibo Gaming</option>
-                    </select>
+                    <form th:action="@{/enviarTimeVermelho}" method="post">
+                        <select id="timevermelho" name="timevermelho">
+                        </select>
+                        <button id="Enviar Time Vermelho" type="submit">Enviar</button>
+                    </form>
                     <br></br><br></br>
                     <h3>Campeões</h3>
                     <div class="container-champions">
                         <h4>Top</h4>
-                        <select id="top-vernelho" name="top-vermelho">
-                            <option value="Aatrox">Aatrox</option>
-                            <option value="Ahri">Ahri</option>
-                            <option value="Akali">Akali</option>
-                            <option value="Akshan">Akshan</option>
-                            <option value="Alistar">Alistar</option>
-                            <option value="Amumu">Amumu</option>
-                            <option value="Anivia">Anivia</option>
-                            <option value="Annie">Annie</option>
-                            <option value="Aphelios">Aphelios</option>
-                            <option value="Ashe">Ashe</option>
-                            <option value="Aurelion Sol">Aurelion Sol</option>
-                            <option value="Azir">Azir</option>
-                            <option value="Bard">Bard</option>
-                            <option value="Bel'Veth">Bel'Veth</option>
-                            <option value="Blitzcrank">Blitzcrank</option>
-                            <option value="Brand">Brand</option>
-                            <option value="Braum">Braum</option>
-                            <option value="Briar">Briar</option>
-                            <option value="Caitlyn">Caitlyn</option>
-                            <option value="Camille">Camille</option>
-                            <option value="Cassiopeia">Cassiopeia</option>
-                            <option value="Cho'Gath">Cho'Gath</option>
-                            <option value="Corki">Corki</option>
-                            <option value="Darius">Darius</option>
-                            <option value="Diana">Diana</option>
-                            <option value="Dr. Mundo">Dr. Mundo</option>
-                            <option value="Draven">Draven</option>
-                            <option value="Ekko">Ekko</option>
-                            <option value="Elise">Elise</option>
-                            <option value="Evelynn">Evelynn</option>
-                            <option value="Ezreal">Ezreal</option>
-                            <option value="Fiddlesticks">Fiddlesticks</option>
-                            <option value="Fiora">Fiora</option>
-                            <option value="Fizz">Fizz</option>
-                            <option value="Galio">Galio</option>
-                            <option value="Gangplank">Gangplank</option>
-                            <option value="Garen">Garen</option>
-                            <option value="Gnar">Gnar</option>
-                            <option value="Gragas">Gragas</option>
-                            <option value="Graves">Graves</option>
-                            <option value="Gwen">Gwen</option>
-                            <option value="Hecarim">Hecarim</option>
-                            <option value="Heimerdinger">Heimerdinger</option>
-                            <option value="Hwei">Hwei</option>
-                            <option value="Illaoi">Illaoi</option>
-                            <option value="Irelia">Irelia</option>
-                            <option value="Ivern">Ivern</option>
-                            <option value="Janna">Janna</option>
-                            <option value="Jarvan IV">Jarvan IV</option>
-                            <option value="Jax">Jax</option>
-                            <option value="Jayce">Jayce</option>
-                            <option value="Jhin">Jhin</option>
-                            <option value="Jinx">Jinx</option>
-                            <option value="K'Sante">K'Sante</option>
-                            <option value="Kai'Sa">Kai'Sa</option>
-                            <option value="Kalista">Kalista</option>
-                            <option value="Karma">Karma</option>
-                            <option value="Karthus">Karthus</option>
-                            <option value="Kassadin">Kassadin</option>
-                            <option value="Katarina">Katarina</option>
-                            <option value="Kayle">Kayle</option>
-                            <option value="Kayn">Kayn</option>
-                            <option value="Kennen">Kennen</option>
-                            <option value="Kha'Zix">Kha'Zix</option>
-                            <option value="Kindred">Kindred</option>
-                            <option value="Kled">Kled</option>
-                            <option value="Kog'Maw">Kog'Maw</option>
-                            <option value="LeBlanc">LeBlanc</option>
-                            <option value="Lee Sin">Lee Sin</option>
-                            <option value="Leona">Leona</option>
-                            <option value="Lillia">Lillia</option>
-                            <option value="Lissandra">Lissandra</option>
-                            <option value="Lucian">Lucian</option>
-                            <option value="Lulu">Lulu</option>
-                            <option value="Lux">Lux</option>
-                            <option value="Malphite">Malphite</option>
-                            <option value="Malzahar">Malzahar</option>
-                            <option value="Maokai">Maokai</option>
-                            <option value="Master Yi">Master Yi</option>
-                            <option value="Milio">Milio</option>
-                            <option value="Miss Fortune">Miss Fortune</option>
-                            <option value="Mordekaiser">Mordekaiser</option>
-                            <option value="Morgana">Morgana</option>
-                            <option value="Naafiri">Naafiri</option>
-                            <option value="Nami">Nami</option>
-                            <option value="Nasus">Nasus</option>
-                            <option value="Nautilus">Nautilus</option>
-                            <option value="Neeko">Neeko</option>
-                            <option value="Nidalee">Nidalee</option>
-                            <option value="Nilah">Nilah</option>
-                            <option value="Nocturne">Nocturne</option>
-                            <option value="Nunu & Willump">Nunu & Willump</option>
-                            <option value="Olaf">Olaf</option>
-                            <option value="Orianna">Orianna</option>
-                            <option value="Ornn">Ornn</option>
-                            <option value="Pantheon">Pantheon</option>
-                            <option value="Poppy">Poppy</option>
-                            <option value="Pyke">Pyke</option>
-                            <option value="Qiyana">Qiyana</option>
-                            <option value="Quinn">Quinn</option>
-                            <option value="Rakan">Rakan</option>
-                            <option value="Rammus">Rammus</option>
-                            <option value="Rek'Sai">Rek'Sai</option>
-                            <option value="Rell">Rell</option>
-                            <option value="Renata Glasc">Renata Glasc</option>
-                            <option value="Renekton">Renekton</option>
-                            <option value="Rengar">Rengar</option>
-                            <option value="Riven">Riven</option>
-                            <option value="Rumble">Rumble</option>
-                            <option value="Ryze">Ryze</option>
-                            <option value="Samira">Samira</option>
-                            <option value="Sejuani">Sejuani</option>
-                            <option value="Senna">Senna</option>
-                            <option value="Seraphine">Seraphine</option>
-                            <option value="Sett">Sett</option>
-                            <option value="Shaco">Shaco</option>
-                            <option value="Shen">Shen</option>
-                            <option value="Shyvana">Shyvana</option>
-                            <option value="Singed">Singed</option>
-                            <option value="Sion">Sion</option>
-                            <option value="Sivir">Sivir</option>
-                            <option value="Skarner">Skarner</option>
-                            <option value="Sona">Sona</option>
-                            <option value="Soraka">Soraka</option>
-                            <option value="Swain">Swain</option>
-                            <option value="Sylas">Sylas</option>
-                            <option value="Syndra">Syndra</option>
-                            <option value="Tahm Kench">Tahm Kench</option>
-                            <option value="Taliyah">Taliyah</option>
-                            <option value="Talon">Talon</option>
-                            <option value="Taric">Taric</option>
-                            <option value="Senna">Senna</option>
-                            <option value="Teemo">Teemo</option>
-                            <option value="Thresh">Thresh</option>
-                            <option value="Tristana">Tristana</option>
-                            <option value="Trundle">Trundle</option>
-                            <option value="Tryndamere">Tryndamere</option>
-                            <option value="Twisted Fate">Twisted Fate</option>
-                            <option value="Twitch">Twitch</option>
-                            <option value="Udyr">Udyr</option>
-                            <option value="Urgot">Urgot</option>
-                            <option value="Varus">Varus</option>
-                            <option value="Vayne">Vayne</option>
-                            <option value="Veigar">Veigar</option>
-                            <option value="Vel'Koz">Vel'Koz</option>
-                            <option value="Vex">Vex</option>
-                            <option value="Vi">Vi</option>
-                            <option value="Viego">Viego</option>
-                            <option value="Viktor">Viktor</option>
-                            <option value="Vladimir">Vladimir</option>
-                            <option value="Volibear">Volibear</option>
-                            <option value="Warwick">Warwick</option>
-                            <option value="Wukong">Wukong</option>
-                            <option value="Xayah">Xayah</option>
-                            <option value="Xerath">Xerath</option>
-                            <option value="Xin Zhao">Xin Zhao</option>
-                            <option value="Yasuo">Yasuo</option>
-                            <option value="Yone">Yone</option>
-                            <option value="Yorick">Yorick</option>
-                            <option value="Yuumi">Yuumi</option>
-                            <option value="Zac">Zac</option>
-                            <option value="Zed">Zed</option>
-                            <option value="Zeri">Zeri</option>
-                            <option value="Ziggs">Ziggs</option>
-                            <option value="Zilean">Zilean</option>
-                            <option value="Zoe">Zoe</option>
-                            <option value="Zyra">Zyra</option>
-                        </select>
+                        <td th:text="${partidaAtual.topVermelho}"></td>
+                        <form th:action="@{/enviarTopVermelho}" method="post">
+                            <select id="topvermelho" name="topvermelho">
+                                
+                            </select>
+                            <button id="Enviar Top Vermelho" type="submit">Enviar</button>
+                        </form>
                     </div>
+                    
                     <div class="container-champions">
                         <h4>Jungle</h4>
-                        <select id="jungle-vermelho" name="jungle-vermelho">
-                            <option value="Aatrox">Aatrox</option>
-                            <option value="Ahri">Ahri</option>
-                            <option value="Akali">Akali</option>
-                            <option value="Akshan">Akshan</option>
-                            <option value="Alistar">Alistar</option>
-                            <option value="Amumu">Amumu</option>
-                            <option value="Anivia">Anivia</option>
-                            <option value="Annie">Annie</option>
-                            <option value="Aphelios">Aphelios</option>
-                            <option value="Ashe">Ashe</option>
-                            <option value="Aurelion Sol">Aurelion Sol</option>
-                            <option value="Azir">Azir</option>
-                            <option value="Bard">Bard</option>
-                            <option value="Bel'Veth">Bel'Veth</option>
-                            <option value="Blitzcrank">Blitzcrank</option>
-                            <option value="Brand">Brand</option>
-                            <option value="Braum">Braum</option>
-                            <option value="Briar">Briar</option>
-                            <option value="Caitlyn">Caitlyn</option>
-                            <option value="Camille">Camille</option>
-                            <option value="Cassiopeia">Cassiopeia</option>
-                            <option value="Cho'Gath">Cho'Gath</option>
-                            <option value="Corki">Corki</option>
-                            <option value="Darius">Darius</option>
-                            <option value="Diana">Diana</option>
-                            <option value="Dr. Mundo">Dr. Mundo</option>
-                            <option value="Draven">Draven</option>
-                            <option value="Ekko">Ekko</option>
-                            <option value="Elise">Elise</option>
-                            <option value="Evelynn">Evelynn</option>
-                            <option value="Ezreal">Ezreal</option>
-                            <option value="Fiddlesticks">Fiddlesticks</option>
-                            <option value="Fiora">Fiora</option>
-                            <option value="Fizz">Fizz</option>
-                            <option value="Galio">Galio</option>
-                            <option value="Gangplank">Gangplank</option>
-                            <option value="Garen">Garen</option>
-                            <option value="Gnar">Gnar</option>
-                            <option value="Gragas">Gragas</option>
-                            <option value="Graves">Graves</option>
-                            <option value="Gwen">Gwen</option>
-                            <option value="Hecarim">Hecarim</option>
-                            <option value="Heimerdinger">Heimerdinger</option>
-                            <option value="Hwei">Hwei</option>
-                            <option value="Illaoi">Illaoi</option>
-                            <option value="Irelia">Irelia</option>
-                            <option value="Ivern">Ivern</option>
-                            <option value="Janna">Janna</option>
-                            <option value="Jarvan IV">Jarvan IV</option>
-                            <option value="Jax">Jax</option>
-                            <option value="Jayce">Jayce</option>
-                            <option value="Jhin">Jhin</option>
-                            <option value="Jinx">Jinx</option>
-                            <option value="K'Sante">K'Sante</option>
-                            <option value="Kai'Sa">Kai'Sa</option>
-                            <option value="Kalista">Kalista</option>
-                            <option value="Karma">Karma</option>
-                            <option value="Karthus">Karthus</option>
-                            <option value="Kassadin">Kassadin</option>
-                            <option value="Katarina">Katarina</option>
-                            <option value="Kayle">Kayle</option>
-                            <option value="Kayn">Kayn</option>
-                            <option value="Kennen">Kennen</option>
-                            <option value="Kha'Zix">Kha'Zix</option>
-                            <option value="Kindred">Kindred</option>
-                            <option value="Kled">Kled</option>
-                            <option value="Kog'Maw">Kog'Maw</option>
-                            <option value="LeBlanc">LeBlanc</option>
-                            <option value="Lee Sin">Lee Sin</option>
-                            <option value="Leona">Leona</option>
-                            <option value="Lillia">Lillia</option>
-                            <option value="Lissandra">Lissandra</option>
-                            <option value="Lucian">Lucian</option>
-                            <option value="Lulu">Lulu</option>
-                            <option value="Lux">Lux</option>
-                            <option value="Malphite">Malphite</option>
-                            <option value="Malzahar">Malzahar</option>
-                            <option value="Maokai">Maokai</option>
-                            <option value="Master Yi">Master Yi</option>
-                            <option value="Milio">Milio</option>
-                            <option value="Miss Fortune">Miss Fortune</option>
-                            <option value="Mordekaiser">Mordekaiser</option>
-                            <option value="Morgana">Morgana</option>
-                            <option value="Naafiri">Naafiri</option>
-                            <option value="Nami">Nami</option>
-                            <option value="Nasus">Nasus</option>
-                            <option value="Nautilus">Nautilus</option>
-                            <option value="Neeko">Neeko</option>
-                            <option value="Nidalee">Nidalee</option>
-                            <option value="Nilah">Nilah</option>
-                            <option value="Nocturne">Nocturne</option>
-                            <option value="Nunu & Willump">Nunu & Willump</option>
-                            <option value="Olaf">Olaf</option>
-                            <option value="Orianna">Orianna</option>
-                            <option value="Ornn">Ornn</option>
-                            <option value="Pantheon">Pantheon</option>
-                            <option value="Poppy">Poppy</option>
-                            <option value="Pyke">Pyke</option>
-                            <option value="Qiyana">Qiyana</option>
-                            <option value="Quinn">Quinn</option>
-                            <option value="Rakan">Rakan</option>
-                            <option value="Rammus">Rammus</option>
-                            <option value="Rek'Sai">Rek'Sai</option>
-                            <option value="Rell">Rell</option>
-                            <option value="Renata Glasc">Renata Glasc</option>
-                            <option value="Renekton">Renekton</option>
-                            <option value="Rengar">Rengar</option>
-                            <option value="Riven">Riven</option>
-                            <option value="Rumble">Rumble</option>
-                            <option value="Ryze">Ryze</option>
-                            <option value="Samira">Samira</option>
-                            <option value="Sejuani">Sejuani</option>
-                            <option value="Senna">Senna</option>
-                            <option value="Seraphine">Seraphine</option>
-                            <option value="Sett">Sett</option>
-                            <option value="Shaco">Shaco</option>
-                            <option value="Shen">Shen</option>
-                            <option value="Shyvana">Shyvana</option>
-                            <option value="Singed">Singed</option>
-                            <option value="Sion">Sion</option>
-                            <option value="Sivir">Sivir</option>
-                            <option value="Skarner">Skarner</option>
-                            <option value="Sona">Sona</option>
-                            <option value="Soraka">Soraka</option>
-                            <option value="Swain">Swain</option>
-                            <option value="Sylas">Sylas</option>
-                            <option value="Syndra">Syndra</option>
-                            <option value="Tahm Kench">Tahm Kench</option>
-                            <option value="Taliyah">Taliyah</option>
-                            <option value="Talon">Talon</option>
-                            <option value="Taric">Taric</option>
-                            <option value="Senna">Senna</option>
-                            <option value="Teemo">Teemo</option>
-                            <option value="Thresh">Thresh</option>
-                            <option value="Tristana">Tristana</option>
-                            <option value="Trundle">Trundle</option>
-                            <option value="Tryndamere">Tryndamere</option>
-                            <option value="Twisted Fate">Twisted Fate</option>
-                            <option value="Twitch">Twitch</option>
-                            <option value="Udyr">Udyr</option>
-                            <option value="Urgot">Urgot</option>
-                            <option value="Varus">Varus</option>
-                            <option value="Vayne">Vayne</option>
-                            <option value="Veigar">Veigar</option>
-                            <option value="Vel'Koz">Vel'Koz</option>
-                            <option value="Vex">Vex</option>
-                            <option value="Vi">Vi</option>
-                            <option value="Viego">Viego</option>
-                            <option value="Viktor">Viktor</option>
-                            <option value="Vladimir">Vladimir</option>
-                            <option value="Volibear">Volibear</option>
-                            <option value="Warwick">Warwick</option>
-                            <option value="Wukong">Wukong</option>
-                            <option value="Xayah">Xayah</option>
-                            <option value="Xerath">Xerath</option>
-                            <option value="Xin Zhao">Xin Zhao</option>
-                            <option value="Yasuo">Yasuo</option>
-                            <option value="Yone">Yone</option>
-                            <option value="Yorick">Yorick</option>
-                            <option value="Yuumi">Yuumi</option>
-                            <option value="Zac">Zac</option>
-                            <option value="Zed">Zed</option>
-                            <option value="Zeri">Zeri</option>
-                            <option value="Ziggs">Ziggs</option>
-                            <option value="Zilean">Zilean</option>
-                            <option value="Zoe">Zoe</option>
-                            <option value="Zyra">Zyra</option>
-                        </select>
+                        <td th:text="${partidaAtual.jungleVermelho}"></td>
+                        <form th:action="@{/enviarJungleVermelho}" method="post">
+                            <select id="junglevermelho" name="junglevermelho">
+                                
+                            </select>
+                            <button id="Enviar Jungle Vermelho" type="submit">Enviar</button>
+                        </form>
                     </div>
+                    
                     <div class="container-champions">
                         <h4>Mid</h4>
-                        <select id="mid-vermelho" name="mid-vermelho">
-                            <option value="Aatrox">Aatrox</option>
-                            <option value="Ahri">Ahri</option>
-                            <option value="Akali">Akali</option>
-                            <option value="Akshan">Akshan</option>
-                            <option value="Alistar">Alistar</option>
-                            <option value="Amumu">Amumu</option>
-                            <option value="Anivia">Anivia</option>
-                            <option value="Annie">Annie</option>
-                            <option value="Aphelios">Aphelios</option>
-                            <option value="Ashe">Ashe</option>
-                            <option value="Aurelion Sol">Aurelion Sol</option>
-                            <option value="Azir">Azir</option>
-                            <option value="Bard">Bard</option>
-                            <option value="Bel'Veth">Bel'Veth</option>
-                            <option value="Blitzcrank">Blitzcrank</option>
-                            <option value="Brand">Brand</option>
-                            <option value="Braum">Braum</option>
-                            <option value="Briar">Briar</option>
-                            <option value="Caitlyn">Caitlyn</option>
-                            <option value="Camille">Camille</option>
-                            <option value="Cassiopeia">Cassiopeia</option>
-                            <option value="Cho'Gath">Cho'Gath</option>
-                            <option value="Corki">Corki</option>
-                            <option value="Darius">Darius</option>
-                            <option value="Diana">Diana</option>
-                            <option value="Dr. Mundo">Dr. Mundo</option>
-                            <option value="Draven">Draven</option>
-                            <option value="Ekko">Ekko</option>
-                            <option value="Elise">Elise</option>
-                            <option value="Evelynn">Evelynn</option>
-                            <option value="Ezreal">Ezreal</option>
-                            <option value="Fiddlesticks">Fiddlesticks</option>
-                            <option value="Fiora">Fiora</option>
-                            <option value="Fizz">Fizz</option>
-                            <option value="Galio">Galio</option>
-                            <option value="Gangplank">Gangplank</option>
-                            <option value="Garen">Garen</option>
-                            <option value="Gnar">Gnar</option>
-                            <option value="Gragas">Gragas</option>
-                            <option value="Graves">Graves</option>
-                            <option value="Gwen">Gwen</option>
-                            <option value="Hecarim">Hecarim</option>
-                            <option value="Heimerdinger">Heimerdinger</option>
-                            <option value="Hwei">Hwei</option>
-                            <option value="Illaoi">Illaoi</option>
-                            <option value="Irelia">Irelia</option>
-                            <option value="Ivern">Ivern</option>
-                            <option value="Janna">Janna</option>
-                            <option value="Jarvan IV">Jarvan IV</option>
-                            <option value="Jax">Jax</option>
-                            <option value="Jayce">Jayce</option>
-                            <option value="Jhin">Jhin</option>
-                            <option value="Jinx">Jinx</option>
-                            <option value="K'Sante">K'Sante</option>
-                            <option value="Kai'Sa">Kai'Sa</option>
-                            <option value="Kalista">Kalista</option>
-                            <option value="Karma">Karma</option>
-                            <option value="Karthus">Karthus</option>
-                            <option value="Kassadin">Kassadin</option>
-                            <option value="Katarina">Katarina</option>
-                            <option value="Kayle">Kayle</option>
-                            <option value="Kayn">Kayn</option>
-                            <option value="Kennen">Kennen</option>
-                            <option value="Kha'Zix">Kha'Zix</option>
-                            <option value="Kindred">Kindred</option>
-                            <option value="Kled">Kled</option>
-                            <option value="Kog'Maw">Kog'Maw</option>
-                            <option value="LeBlanc">LeBlanc</option>
-                            <option value="Lee Sin">Lee Sin</option>
-                            <option value="Leona">Leona</option>
-                            <option value="Lillia">Lillia</option>
-                            <option value="Lissandra">Lissandra</option>
-                            <option value="Lucian">Lucian</option>
-                            <option value="Lulu">Lulu</option>
-                            <option value="Lux">Lux</option>
-                            <option value="Malphite">Malphite</option>
-                            <option value="Malzahar">Malzahar</option>
-                            <option value="Maokai">Maokai</option>
-                            <option value="Master Yi">Master Yi</option>
-                            <option value="Milio">Milio</option>
-                            <option value="Miss Fortune">Miss Fortune</option>
-                            <option value="Mordekaiser">Mordekaiser</option>
-                            <option value="Morgana">Morgana</option>
-                            <option value="Naafiri">Naafiri</option>
-                            <option value="Nami">Nami</option>
-                            <option value="Nasus">Nasus</option>
-                            <option value="Nautilus">Nautilus</option>
-                            <option value="Neeko">Neeko</option>
-                            <option value="Nidalee">Nidalee</option>
-                            <option value="Nilah">Nilah</option>
-                            <option value="Nocturne">Nocturne</option>
-                            <option value="Nunu & Willump">Nunu & Willump</option>
-                            <option value="Olaf">Olaf</option>
-                            <option value="Orianna">Orianna</option>
-                            <option value="Ornn">Ornn</option>
-                            <option value="Pantheon">Pantheon</option>
-                            <option value="Poppy">Poppy</option>
-                            <option value="Pyke">Pyke</option>
-                            <option value="Qiyana">Qiyana</option>
-                            <option value="Quinn">Quinn</option>
-                            <option value="Rakan">Rakan</option>
-                            <option value="Rammus">Rammus</option>
-                            <option value="Rek'Sai">Rek'Sai</option>
-                            <option value="Rell">Rell</option>
-                            <option value="Renata Glasc">Renata Glasc</option>
-                            <option value="Renekton">Renekton</option>
-                            <option value="Rengar">Rengar</option>
-                            <option value="Riven">Riven</option>
-                            <option value="Rumble">Rumble</option>
-                            <option value="Ryze">Ryze</option>
-                            <option value="Samira">Samira</option>
-                            <option value="Sejuani">Sejuani</option>
-                            <option value="Senna">Senna</option>
-                            <option value="Seraphine">Seraphine</option>
-                            <option value="Sett">Sett</option>
-                            <option value="Shaco">Shaco</option>
-                            <option value="Shen">Shen</option>
-                            <option value="Shyvana">Shyvana</option>
-                            <option value="Singed">Singed</option>
-                            <option value="Sion">Sion</option>
-                            <option value="Sivir">Sivir</option>
-                            <option value="Skarner">Skarner</option>
-                            <option value="Sona">Sona</option>
-                            <option value="Soraka">Soraka</option>
-                            <option value="Swain">Swain</option>
-                            <option value="Sylas">Sylas</option>
-                            <option value="Syndra">Syndra</option>
-                            <option value="Tahm Kench">Tahm Kench</option>
-                            <option value="Taliyah">Taliyah</option>
-                            <option value="Talon">Talon</option>
-                            <option value="Taric">Taric</option>
-                            <option value="Senna">Senna</option>
-                            <option value="Teemo">Teemo</option>
-                            <option value="Thresh">Thresh</option>
-                            <option value="Tristana">Tristana</option>
-                            <option value="Trundle">Trundle</option>
-                            <option value="Tryndamere">Tryndamere</option>
-                            <option value="Twisted Fate">Twisted Fate</option>
-                            <option value="Twitch">Twitch</option>
-                            <option value="Udyr">Udyr</option>
-                            <option value="Urgot">Urgot</option>
-                            <option value="Varus">Varus</option>
-                            <option value="Vayne">Vayne</option>
-                            <option value="Veigar">Veigar</option>
-                            <option value="Vel'Koz">Vel'Koz</option>
-                            <option value="Vex">Vex</option>
-                            <option value="Vi">Vi</option>
-                            <option value="Viego">Viego</option>
-                            <option value="Viktor">Viktor</option>
-                            <option value="Vladimir">Vladimir</option>
-                            <option value="Volibear">Volibear</option>
-                            <option value="Warwick">Warwick</option>
-                            <option value="Wukong">Wukong</option>
-                            <option value="Xayah">Xayah</option>
-                            <option value="Xerath">Xerath</option>
-                            <option value="Xin Zhao">Xin Zhao</option>
-                            <option value="Yasuo">Yasuo</option>
-                            <option value="Yone">Yone</option>
-                            <option value="Yorick">Yorick</option>
-                            <option value="Yuumi">Yuumi</option>
-                            <option value="Zac">Zac</option>
-                            <option value="Zed">Zed</option>
-                            <option value="Zeri">Zeri</option>
-                            <option value="Ziggs">Ziggs</option>
-                            <option value="Zilean">Zilean</option>
-                            <option value="Zoe">Zoe</option>
-                            <option value="Zyra">Zyra</option>
-                        </select>
+                        <td th:text="${partidaAtual.midVermelho}"></td>
+                        <form th:action="@{/enviarMidVermelho}" method="post">
+                            <select id="midvermelho" name="midvermelho">
+                                
+                            </select>
+                            <button id="Enviar Mid Vermelho" type="submit">Enviar</button>
+                        </form>
                     </div>
+                    
                     <div class="container-champions">
                         <h4>ADC</h4>
-                        <select id="adc-vermelho" name="adc-vermelho">
-                            <option value="Aatrox">Aatrox</option>
-                            <option value="Ahri">Ahri</option>
-                            <option value="Akali">Akali</option>
-                            <option value="Akshan">Akshan</option>
-                            <option value="Alistar">Alistar</option>
-                            <option value="Amumu">Amumu</option>
-                            <option value="Anivia">Anivia</option>
-                            <option value="Annie">Annie</option>
-                            <option value="Aphelios">Aphelios</option>
-                            <option value="Ashe">Ashe</option>
-                            <option value="Aurelion Sol">Aurelion Sol</option>
-                            <option value="Azir">Azir</option>
-                            <option value="Bard">Bard</option>
-                            <option value="Bel'Veth">Bel'Veth</option>
-                            <option value="Blitzcrank">Blitzcrank</option>
-                            <option value="Brand">Brand</option>
-                            <option value="Braum">Braum</option>
-                            <option value="Briar">Briar</option>
-                            <option value="Caitlyn">Caitlyn</option>
-                            <option value="Camille">Camille</option>
-                            <option value="Cassiopeia">Cassiopeia</option>
-                            <option value="Cho'Gath">Cho'Gath</option>
-                            <option value="Corki">Corki</option>
-                            <option value="Darius">Darius</option>
-                            <option value="Diana">Diana</option>
-                            <option value="Dr. Mundo">Dr. Mundo</option>
-                            <option value="Draven">Draven</option>
-                            <option value="Ekko">Ekko</option>
-                            <option value="Elise">Elise</option>
-                            <option value="Evelynn">Evelynn</option>
-                            <option value="Ezreal">Ezreal</option>
-                            <option value="Fiddlesticks">Fiddlesticks</option>
-                            <option value="Fiora">Fiora</option>
-                            <option value="Fizz">Fizz</option>
-                            <option value="Galio">Galio</option>
-                            <option value="Gangplank">Gangplank</option>
-                            <option value="Garen">Garen</option>
-                            <option value="Gnar">Gnar</option>
-                            <option value="Gragas">Gragas</option>
-                            <option value="Graves">Graves</option>
-                            <option value="Gwen">Gwen</option>
-                            <option value="Hecarim">Hecarim</option>
-                            <option value="Heimerdinger">Heimerdinger</option>
-                            <option value="Hwei">Hwei</option>
-                            <option value="Illaoi">Illaoi</option>
-                            <option value="Irelia">Irelia</option>
-                            <option value="Ivern">Ivern</option>
-                            <option value="Janna">Janna</option>
-                            <option value="Jarvan IV">Jarvan IV</option>
-                            <option value="Jax">Jax</option>
-                            <option value="Jayce">Jayce</option>
-                            <option value="Jhin">Jhin</option>
-                            <option value="Jinx">Jinx</option>
-                            <option value="K'Sante">K'Sante</option>
-                            <option value="Kai'Sa">Kai'Sa</option>
-                            <option value="Kalista">Kalista</option>
-                            <option value="Karma">Karma</option>
-                            <option value="Karthus">Karthus</option>
-                            <option value="Kassadin">Kassadin</option>
-                            <option value="Katarina">Katarina</option>
-                            <option value="Kayle">Kayle</option>
-                            <option value="Kayn">Kayn</option>
-                            <option value="Kennen">Kennen</option>
-                            <option value="Kha'Zix">Kha'Zix</option>
-                            <option value="Kindred">Kindred</option>
-                            <option value="Kled">Kled</option>
-                            <option value="Kog'Maw">Kog'Maw</option>
-                            <option value="LeBlanc">LeBlanc</option>
-                            <option value="Lee Sin">Lee Sin</option>
-                            <option value="Leona">Leona</option>
-                            <option value="Lillia">Lillia</option>
-                            <option value="Lissandra">Lissandra</option>
-                            <option value="Lucian">Lucian</option>
-                            <option value="Lulu">Lulu</option>
-                            <option value="Lux">Lux</option>
-                            <option value="Malphite">Malphite</option>
-                            <option value="Malzahar">Malzahar</option>
-                            <option value="Maokai">Maokai</option>
-                            <option value="Master Yi">Master Yi</option>
-                            <option value="Milio">Milio</option>
-                            <option value="Miss Fortune">Miss Fortune</option>
-                            <option value="Mordekaiser">Mordekaiser</option>
-                            <option value="Morgana">Morgana</option>
-                            <option value="Naafiri">Naafiri</option>
-                            <option value="Nami">Nami</option>
-                            <option value="Nasus">Nasus</option>
-                            <option value="Nautilus">Nautilus</option>
-                            <option value="Neeko">Neeko</option>
-                            <option value="Nidalee">Nidalee</option>
-                            <option value="Nilah">Nilah</option>
-                            <option value="Nocturne">Nocturne</option>
-                            <option value="Nunu & Willump">Nunu & Willump</option>
-                            <option value="Olaf">Olaf</option>
-                            <option value="Orianna">Orianna</option>
-                            <option value="Ornn">Ornn</option>
-                            <option value="Pantheon">Pantheon</option>
-                            <option value="Poppy">Poppy</option>
-                            <option value="Pyke">Pyke</option>
-                            <option value="Qiyana">Qiyana</option>
-                            <option value="Quinn">Quinn</option>
-                            <option value="Rakan">Rakan</option>
-                            <option value="Rammus">Rammus</option>
-                            <option value="Rek'Sai">Rek'Sai</option>
-                            <option value="Rell">Rell</option>
-                            <option value="Renata Glasc">Renata Glasc</option>
-                            <option value="Renekton">Renekton</option>
-                            <option value="Rengar">Rengar</option>
-                            <option value="Riven">Riven</option>
-                            <option value="Rumble">Rumble</option>
-                            <option value="Ryze">Ryze</option>
-                            <option value="Samira">Samira</option>
-                            <option value="Sejuani">Sejuani</option>
-                            <option value="Senna">Senna</option>
-                            <option value="Seraphine">Seraphine</option>
-                            <option value="Sett">Sett</option>
-                            <option value="Shaco">Shaco</option>
-                            <option value="Shen">Shen</option>
-                            <option value="Shyvana">Shyvana</option>
-                            <option value="Singed">Singed</option>
-                            <option value="Sion">Sion</option>
-                            <option value="Sivir">Sivir</option>
-                            <option value="Skarner">Skarner</option>
-                            <option value="Sona">Sona</option>
-                            <option value="Soraka">Soraka</option>
-                            <option value="Swain">Swain</option>
-                            <option value="Sylas">Sylas</option>
-                            <option value="Syndra">Syndra</option>
-                            <option value="Tahm Kench">Tahm Kench</option>
-                            <option value="Taliyah">Taliyah</option>
-                            <option value="Talon">Talon</option>
-                            <option value="Taric">Taric</option>
-                            <option value="Senna">Senna</option>
-                            <option value="Teemo">Teemo</option>
-                            <option value="Thresh">Thresh</option>
-                            <option value="Tristana">Tristana</option>
-                            <option value="Trundle">Trundle</option>
-                            <option value="Tryndamere">Tryndamere</option>
-                            <option value="Twisted Fate">Twisted Fate</option>
-                            <option value="Twitch">Twitch</option>
-                            <option value="Udyr">Udyr</option>
-                            <option value="Urgot">Urgot</option>
-                            <option value="Varus">Varus</option>
-                            <option value="Vayne">Vayne</option>
-                            <option value="Veigar">Veigar</option>
-                            <option value="Vel'Koz">Vel'Koz</option>
-                            <option value="Vex">Vex</option>
-                            <option value="Vi">Vi</option>
-                            <option value="Viego">Viego</option>
-                            <option value="Viktor">Viktor</option>
-                            <option value="Vladimir">Vladimir</option>
-                            <option value="Volibear">Volibear</option>
-                            <option value="Warwick">Warwick</option>
-                            <option value="Wukong">Wukong</option>
-                            <option value="Xayah">Xayah</option>
-                            <option value="Xerath">Xerath</option>
-                            <option value="Xin Zhao">Xin Zhao</option>
-                            <option value="Yasuo">Yasuo</option>
-                            <option value="Yone">Yone</option>
-                            <option value="Yorick">Yorick</option>
-                            <option value="Yuumi">Yuumi</option>
-                            <option value="Zac">Zac</option>
-                            <option value="Zed">Zed</option>
-                            <option value="Zeri">Zeri</option>
-                            <option value="Ziggs">Ziggs</option>
-                            <option value="Zilean">Zilean</option>
-                            <option value="Zoe">Zoe</option>
-                            <option value="Zyra">Zyra</option>
-                        </select>
+                        <td th:text="${partidaAtual.adcVermelho}"></td>
+                        <form th:action="@{/enviarAdcVermelho}" method="post">
+                            <select id="adcvermelho" name="adcvermelho">
+                                
+                            </select>
+                            <button id="Enviar ADC Vermelho" type="submit">Enviar</button>
+                        </form>
                     </div>
+                    
                     <div class="container-champions">
                         <h4>Supp</h4>
-                        <select id="supp-vermelho" name="supp-vermelho">
-                            <option value="Aatrox">Aatrox</option>
-                            <option value="Ahri">Ahri</option>
-                            <option value="Akali">Akali</option>
-                            <option value="Akshan">Akshan</option>
-                            <option value="Alistar">Alistar</option>
-                            <option value="Amumu">Amumu</option>
-                            <option value="Anivia">Anivia</option>
-                            <option value="Annie">Annie</option>
-                            <option value="Aphelios">Aphelios</option>
-                            <option value="Ashe">Ashe</option>
-                            <option value="Aurelion Sol">Aurelion Sol</option>
-                            <option value="Azir">Azir</option>
-                            <option value="Bard">Bard</option>
-                            <option value="Bel'Veth">Bel'Veth</option>
-                            <option value="Blitzcrank">Blitzcrank</option>
-                            <option value="Brand">Brand</option>
-                            <option value="Braum">Braum</option>
-                            <option value="Briar">Briar</option>
-                            <option value="Caitlyn">Caitlyn</option>
-                            <option value="Camille">Camille</option>
-                            <option value="Cassiopeia">Cassiopeia</option>
-                            <option value="Cho'Gath">Cho'Gath</option>
-                            <option value="Corki">Corki</option>
-                            <option value="Darius">Darius</option>
-                            <option value="Diana">Diana</option>
-                            <option value="Dr. Mundo">Dr. Mundo</option>
-                            <option value="Draven">Draven</option>
-                            <option value="Ekko">Ekko</option>
-                            <option value="Elise">Elise</option>
-                            <option value="Evelynn">Evelynn</option>
-                            <option value="Ezreal">Ezreal</option>
-                            <option value="Fiddlesticks">Fiddlesticks</option>
-                            <option value="Fiora">Fiora</option>
-                            <option value="Fizz">Fizz</option>
-                            <option value="Galio">Galio</option>
-                            <option value="Gangplank">Gangplank</option>
-                            <option value="Garen">Garen</option>
-                            <option value="Gnar">Gnar</option>
-                            <option value="Gragas">Gragas</option>
-                            <option value="Graves">Graves</option>
-                            <option value="Gwen">Gwen</option>
-                            <option value="Hecarim">Hecarim</option>
-                            <option value="Heimerdinger">Heimerdinger</option>
-                            <option value="Hwei">Hwei</option>
-                            <option value="Illaoi">Illaoi</option>
-                            <option value="Irelia">Irelia</option>
-                            <option value="Ivern">Ivern</option>
-                            <option value="Janna">Janna</option>
-                            <option value="Jarvan IV">Jarvan IV</option>
-                            <option value="Jax">Jax</option>
-                            <option value="Jayce">Jayce</option>
-                            <option value="Jhin">Jhin</option>
-                            <option value="Jinx">Jinx</option>
-                            <option value="K'Sante">K'Sante</option>
-                            <option value="Kai'Sa">Kai'Sa</option>
-                            <option value="Kalista">Kalista</option>
-                            <option value="Karma">Karma</option>
-                            <option value="Karthus">Karthus</option>
-                            <option value="Kassadin">Kassadin</option>
-                            <option value="Katarina">Katarina</option>
-                            <option value="Kayle">Kayle</option>
-                            <option value="Kayn">Kayn</option>
-                            <option value="Kennen">Kennen</option>
-                            <option value="Kha'Zix">Kha'Zix</option>
-                            <option value="Kindred">Kindred</option>
-                            <option value="Kled">Kled</option>
-                            <option value="Kog'Maw">Kog'Maw</option>
-                            <option value="LeBlanc">LeBlanc</option>
-                            <option value="Lee Sin">Lee Sin</option>
-                            <option value="Leona">Leona</option>
-                            <option value="Lillia">Lillia</option>
-                            <option value="Lissandra">Lissandra</option>
-                            <option value="Lucian">Lucian</option>
-                            <option value="Lulu">Lulu</option>
-                            <option value="Lux">Lux</option>
-                            <option value="Malphite">Malphite</option>
-                            <option value="Malzahar">Malzahar</option>
-                            <option value="Maokai">Maokai</option>
-                            <option value="Master Yi">Master Yi</option>
-                            <option value="Milio">Milio</option>
-                            <option value="Miss Fortune">Miss Fortune</option>
-                            <option value="Mordekaiser">Mordekaiser</option>
-                            <option value="Morgana">Morgana</option>
-                            <option value="Naafiri">Naafiri</option>
-                            <option value="Nami">Nami</option>
-                            <option value="Nasus">Nasus</option>
-                            <option value="Nautilus">Nautilus</option>
-                            <option value="Neeko">Neeko</option>
-                            <option value="Nidalee">Nidalee</option>
-                            <option value="Nilah">Nilah</option>
-                            <option value="Nocturne">Nocturne</option>
-                            <option value="Nunu & Willump">Nunu & Willump</option>
-                            <option value="Olaf">Olaf</option>
-                            <option value="Orianna">Orianna</option>
-                            <option value="Ornn">Ornn</option>
-                            <option value="Pantheon">Pantheon</option>
-                            <option value="Poppy">Poppy</option>
-                            <option value="Pyke">Pyke</option>
-                            <option value="Qiyana">Qiyana</option>
-                            <option value="Quinn">Quinn</option>
-                            <option value="Rakan">Rakan</option>
-                            <option value="Rammus">Rammus</option>
-                            <option value="Rek'Sai">Rek'Sai</option>
-                            <option value="Rell">Rell</option>
-                            <option value="Renata Glasc">Renata Glasc</option>
-                            <option value="Renekton">Renekton</option>
-                            <option value="Rengar">Rengar</option>
-                            <option value="Riven">Riven</option>
-                            <option value="Rumble">Rumble</option>
-                            <option value="Ryze">Ryze</option>
-                            <option value="Samira">Samira</option>
-                            <option value="Sejuani">Sejuani</option>
-                            <option value="Senna">Senna</option>
-                            <option value="Seraphine">Seraphine</option>
-                            <option value="Sett">Sett</option>
-                            <option value="Shaco">Shaco</option>
-                            <option value="Shen">Shen</option>
-                            <option value="Shyvana">Shyvana</option>
-                            <option value="Singed">Singed</option>
-                            <option value="Sion">Sion</option>
-                            <option value="Sivir">Sivir</option>
-                            <option value="Skarner">Skarner</option>
-                            <option value="Sona">Sona</option>
-                            <option value="Soraka">Soraka</option>
-                            <option value="Swain">Swain</option>
-                            <option value="Sylas">Sylas</option>
-                            <option value="Syndra">Syndra</option>
-                            <option value="Tahm Kench">Tahm Kench</option>
-                            <option value="Taliyah">Taliyah</option>
-                            <option value="Talon">Talon</option>
-                            <option value="Taric">Taric</option>
-                            <option value="Senna">Senna</option>
-                            <option value="Teemo">Teemo</option>
-                            <option value="Thresh">Thresh</option>
-                            <option value="Tristana">Tristana</option>
-                            <option value="Trundle">Trundle</option>
-                            <option value="Tryndamere">Tryndamere</option>
-                            <option value="Twisted Fate">Twisted Fate</option>
-                            <option value="Twitch">Twitch</option>
-                            <option value="Udyr">Udyr</option>
-                            <option value="Urgot">Urgot</option>
-                            <option value="Varus">Varus</option>
-                            <option value="Vayne">Vayne</option>
-                            <option value="Veigar">Veigar</option>
-                            <option value="Vel'Koz">Vel'Koz</option>
-                            <option value="Vex">Vex</option>
-                            <option value="Vi">Vi</option>
-                            <option value="Viego">Viego</option>
-                            <option value="Viktor">Viktor</option>
-                            <option value="Vladimir">Vladimir</option>
-                            <option value="Volibear">Volibear</option>
-                            <option value="Warwick">Warwick</option>
-                            <option value="Wukong">Wukong</option>
-                            <option value="Xayah">Xayah</option>
-                            <option value="Xerath">Xerath</option>
-                            <option value="Xin Zhao">Xin Zhao</option>
-                            <option value="Yasuo">Yasuo</option>
-                            <option value="Yone">Yone</option>
-                            <option value="Yorick">Yorick</option>
-                            <option value="Yuumi">Yuumi</option>
-                            <option value="Zac">Zac</option>
-                            <option value="Zed">Zed</option>
-                            <option value="Zeri">Zeri</option>
-                            <option value="Ziggs">Ziggs</option>
-                            <option value="Zilean">Zilean</option>
-                            <option value="Zoe">Zoe</option>
-                            <option value="Zyra">Zyra</option>
-                        </select>
+                        <td th:text="${partidaAtual.suppVermelho}"></td>
+                        <form th:action="@{/enviarSuppVermelho}" method="post">
+                            <select id="suppvermelho" name="suppvermelho">  
+                            </select>
+                            <button id="Enviar Supp Vermelho" type="submit">Enviar</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -1799,71 +154,153 @@
         <!-- Início da Seleção de Dragões -->
         <div class="container-dragoes">
             <h3>Dragões</h3>
-            <form  method="post">
-                
-                <label for="colorSelect">Escolha o lado:</label>
-                <select id="colorSelect" name="colorSelect" >
-                    <option value="blue">Blue</option>
-                    <option value="red">Red</option>
+            <form th:action="@{/enviarDragao}" method="post">
+                <select id="dragao" name="dragao">
+                    <option value="Dragao das Nuvens Azul">Dragão das Nuvens Azul</option>
+                    <option value="Dragao das Nuvens Vermelho">Dragão das Nuvens Vermelho</option>
+                    <option value="Dragao da Montanha Azul">Dragão da Montanha Azul</option>
+                    <option value="Dragao da Montanha Vermelho">Dragão da Montanha Vermelho</option>
+                    <option value="Dragao do Oceano Azul">Dragão do Oceano Azul</option>
+                    <option value="Dragao do Oceano Vermelho">Dragão do Oceano Vermelho</option>
+                    <option value="Dragao Infernal Azul">Dragão Infernal Azul</option>
+                    <option value="Dragao Infernal Vermelho">Dragão Infernal Vermelho</option>
+                    <option value="Dragao Hextech Azul">Dragão Hextech Azul</option>
+                    <option value="Dragao Hextech Vermelho">Dragão Hextech Vermelho</option>
+                    <option value="Dragao Chemtech Azul">Dragão Chemtech Azul</option>
+                    <option value="Dragao Chemtech Vermelho">Dragão Chemtech Vermelho</option>
+                    <option value="Dragao Anciao Azul">Dragão Ancião Azul</option>
+                    <option value="Dragao Anciao Vermelho">Dragão Ancião Vermelho</option>
                 </select>
-                
-                <label for="dragonSelect">Escolha um dragão:</label>
-                <select id="dragonSelect" name="dragonSelect" >
-                    <option>Dragão das Nuvens</option>
-                    <option>Dragão da Montanha</option>
-                    <option>Dragão do Oceano</option>
-                    <option>Dragão Infernal</option>
-                    <option>Dragão Hextech</option>
-                    <option>Dragão Chemtech</option>
-                    <option>Dragão Ancião</option>
+                <select id="quantidade" name="quantidade">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
                 </select>
-
-                <button type="submit" id="meuBotao">OK</button>
+                <button  type="submit">Enviar</button>
             </form>
+            <h4 class="azul">Dragão das Nuvens Azul</h4>
+            <td th:text="${partidaAtual.dragaoNuvemAzul}"></td>
+            <h4 class="vermelho">Dragão das Nuvens Vermelho</h4>
+            <td th:text="${partidaAtual.dragaoNuvemVermelho}"></td>
+            <h4 class="azul">Dragão da Montanha Azul</h4>
+            <td th:text="${partidaAtual.dragaoMontanhaAzul}"></td>
+            <h4 class="vermelho">Dragão da Montanha Vermelho</h4>
+            <td th:text="${partidaAtual.dragaoMontanhaVermelho}"></td>
+            <h4 class="azul">Dragão do Oceano Azul</h4>
+            <td th:text="${partidaAtual.dragaoOceanoAzul}"></td>
+            <h4 class="vermelho">Dragão do Oceano Vermelho</h4>
+            <td th:text="${partidaAtual.dragaoOceanoVermelho}"></td>
+            <h4 class="azul">Dragão Infernal Azul</h4>
+            <td th:text="${partidaAtual.dragaoInfernalAzul}"></td>
+            <h4 class="vermelho">Dragão Infernal Vermelho</h4>
+            <td th:text="${partidaAtual.dragaoInfernalVermelho}"></td>
+            <h4 class="azul">Dragão Hextech Azul</h4>
+            <td th:text="${partidaAtual.dragaoHextechAzul}"></td>
+            <h4 class="vermelho">Dragão Hextech Vermelho</h4>
+            <td th:text="${partidaAtual.dragaoHextechVermelho}"></td>
+            <h4 class="azul">Dragão Chemtech Azul</h4>
+            <td th:text="${partidaAtual.dragaoChemtechAzul}"></td>
+            <h4 class="vermelho">Dragão Chemtech Vermelho</h4>
+            <td th:text="${partidaAtual.dragaoChemtechVermelho}"></td>
+            <h4 class="azul">Dragão Ancião Azul</h4>
+            <td th:text="${partidaAtual.dragaoAnciaoAzul}"></td>
+            <h4 class="vermelho">Dragão Ancião Vermelho</h4>
+            <td th:text="${partidaAtual.dragaoAnciaoVermelho}"></td>
         </div>
         <!-- Fim da Seleção de Dragões -->
 
         <!-- Início da Seleção de Barons -->
         <div class="container-barons">
             <h3>Barons</h3>
-            <form method="post">
-                
-                <label for="teamSelect">Escolha a equipe:</label>
-                <select id="teamSelect" name="teamSelect">
-                    <option value="red">Red</option>
-                    <option value="blue">Blue</option>
+            <h3 class="azul">Blue</h3>
+            <td th:text="${partidaAtual.baronAzul}"></td>
+            <br></br>
+            <form th:action="@{/enviarBaronAzul}" method="post">
+                <select id="baronazul" name="baronazul">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
                 </select>
-
-                <label for="baronCount">Número de Barons:</label>
-                <input type="number" id="baronCount" name="baronCount" min="0" value="0" />
-
-                <button type="submit" id="meuBotao">OK</button>
+                <button  type="submit">Enviar</button>
+            </form>
+            <h3 class="vermelho">Red</h3>
+            <td th:text="${partidaAtual.baronVermelho}"></td>
+            <br></br>
+            <form th:action="@{/enviarBaronVermelho}" method="post">
+                <select id="baronvermelho" name="baronvermelho">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <button  type="submit">Enviar</button>
             </form>
         </div>
         <!-- Fim da Seleção de Barons -->
 
         <!-- Início da Diferença de Ouro -->
-        <div class="container-gold-diff">
+        <!--<div class="container-gold-diff">
             <h3>Diferença de Ouro</h3>
-            <form  method="post">
-                
+            <form method="post">
+
                 <label for="teamGoldDiff">Equipe:</label>
-                <select id="teamGoldDiff" name="teamGoldDiff" >
+                <select id="teamGoldDiff" name="teamGoldDiff">
                     <option value="red">Red</option>
                     <option value="blue">Blue</option>
                 </select>
-        
+
                 <label for="goldDiffValue">Valor da Diferença de Ouro (ex: 4569 ou 3.5k):</label>
-                <input type="text" id="goldDiffValue" name="goldDiffValue"  placeholder="Digite o valor" />
-        
-                <button type="submit" id="meuBotao">OK</button>
+                <input type="text" id="goldDiffValue" name="goldDiffValue" placeholder="Digite o valor" />
+
+                <button type="submit" >OK</button>
             </form>
         </div>
-        <!-- Fim da Diferença de Ouro -->
+        Fim da Diferença de Ouro -->
 
 
     </div>
     <script src="scriptPaginaOrganizacao.js"></script>
+    <script src="constLpl.js"></script>
+
+    <script>
+        const ids = ['topazul', 'jungleazul', 'midazul', 'adcazul', 'suppazul', 'topvermelho', 'junglevermelho', 'midvermelho', 'adcvermelho', 'suppvermelho'];
+    
+        ids.forEach(id => {
+            const select = document.getElementById(id);
+            options.forEach(option => {
+                const optionElement = document.createElement('option');
+                optionElement.value = option.value;
+                optionElement.textContent = option.text;
+                select.appendChild(optionElement);
+            });
+        });
+    </script>
+
+    <script>
+        const teamSelect = document.getElementById('timevermelho');
+        const teamBlueSelect = document.getElementById('timeazul');
+        
+        teams.forEach(team => {
+            
+            const optionRed = document.createElement('option');
+            optionRed.value = team.value;
+            optionRed.textContent = team.text;
+            teamSelect.appendChild(optionRed);
+
+            const optionBlue = document.createElement('option');
+            optionBlue.value = team.value;
+            optionBlue.textContent = team.text;
+            teamBlueSelect.appendChild(optionBlue);
+        });
+    </script>
 </body>
 
 </html>
