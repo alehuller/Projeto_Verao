@@ -191,4 +191,94 @@ public class ControllerGeral {
         partidaAtualDAO.reset();
         return "redirect:/paginaEstatisticaLck";
     }
+
+    @PostMapping("/pontoTopAzul")
+    public String pontoTopAzul() throws SQLException {
+        PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+        partidaAtualDAO.pontoTopAzul();
+        partidaAtualDAO.pontoTopVermelhoReset();
+        partidaAtualDAO.pontosTotal();
+        return "redirect:/paginaEstatisticaLck";
+    }
+
+    @PostMapping("/pontoTopVermelho")
+    public String pontoTopVermelho() throws SQLException {
+        PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+        partidaAtualDAO.pontoTopVermelho();
+        partidaAtualDAO.pontoTopAzulReset();
+        partidaAtualDAO.pontosTotal();
+        return "redirect:/paginaEstatisticaLck";
+    }
+
+    @PostMapping("/pontoJungleAzul")
+    public String pontoJungleAzul() throws SQLException {
+        PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+        partidaAtualDAO.pontoJungleAzul();
+        partidaAtualDAO.pontoJungleVermelhoReset();
+        partidaAtualDAO.pontosTotal();
+        return "redirect:/paginaEstatisticaLck";
+    }
+
+    @PostMapping("/pontoJungleVermelho")
+    public String pontoJungleVermelho() throws SQLException {
+        PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+        partidaAtualDAO.pontoJungleVermelho();
+        partidaAtualDAO.pontoJungleAzulReset();
+        partidaAtualDAO.pontosTotal();
+        return "redirect:/paginaEstatisticaLck";
+    }
+
+    @PostMapping("/pontoMidAzul")
+    public String pontoMidAzul() throws SQLException {
+        PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+        partidaAtualDAO.pontoMidAzul();
+        partidaAtualDAO.pontoMidVermelhoReset();
+        partidaAtualDAO.pontosTotal();
+        return "redirect:/paginaEstatisticaLck";
+    }
+
+    @PostMapping("/pontoMidVermelho")
+    public String pontoMidVermelho() throws SQLException {
+        PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+        partidaAtualDAO.pontoMidVermelho();
+        partidaAtualDAO.pontoMidAzulReset();
+        partidaAtualDAO.pontosTotal();
+        return "redirect:/paginaEstatisticaLck";
+    }
+
+    @PostMapping("/pontoAdcAzul")
+    public String pontoAdcAzul() throws SQLException {
+        PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+        partidaAtualDAO.pontoAdcAzul();
+        partidaAtualDAO.pontoAdcVermelhoReset();
+        partidaAtualDAO.pontosTotal();
+        return "redirect:/paginaEstatisticaLck";
+    }
+
+    @PostMapping("/pontoAdcVermelho")
+    public String pontoAdcVermelho() throws SQLException {
+        PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+        partidaAtualDAO.pontoAdcVermelho();
+        partidaAtualDAO.pontoAdcAzulReset();
+        partidaAtualDAO.pontosTotal();
+        return "redirect:/paginaEstatisticaLck";
+    }
+
+    @PostMapping("/pontoSuppAzul")
+    public String pontoSuppAzul() throws SQLException {
+        PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+        partidaAtualDAO.pontoSuppAzul();
+        partidaAtualDAO.pontoSuppVermelhoReset();
+        partidaAtualDAO.pontosTotal();
+        return "redirect:/paginaEstatisticaLck";
+    }
+
+    @PostMapping("/pontoSuppVermelho")
+    public String pontoSuppVermelho() throws SQLException {
+        PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+        partidaAtualDAO.pontoSuppVermelho();
+        partidaAtualDAO.pontoSuppAzulReset();
+        partidaAtualDAO.pontosTotal();
+        return "redirect:/paginaEstatisticaLck";
+    }
 }

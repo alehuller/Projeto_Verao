@@ -66,6 +66,16 @@ public class PartidaAtualDAO {
                     partidaAtual.setPontosVermelho(rs.getString("pontosvermelho"));
                     partidaAtual.setDragaoNuvemAzul(rs.getString("dragaonuvemazul"));
                     partidaAtual.setDragaoNuvemVermelho(rs.getString("dragaonuvemvermelho"));
+                    partidaAtual.setPontosAdcAzul(rs.getString("pontosadcazul"));
+                    partidaAtual.setPontosAdcVermelho(rs.getString("pontosadcvermelho"));
+                    partidaAtual.setPontosJungleAzul(rs.getString("pontosjungleazul"));
+                    partidaAtual.setPontosJungleVermelho(rs.getString("pontosjunglevermelho"));
+                    partidaAtual.setPontosMidAzul(rs.getString("pontosmidazul"));
+                    partidaAtual.setPontosMidVermelho(rs.getString("pontosmidvermelho"));
+                    partidaAtual.setPontosSuppAzul(rs.getString("pontossuppazul"));
+                    partidaAtual.setPontosSuppVermelho(rs.getString("pontossuppvermelho"));
+                    partidaAtual.setPontosTopAzul(rs.getString("pontostopazul"));
+                    partidaAtual.setPontosTopVermelho(rs.getString("pontostopvermelho"));
                     return partidaAtual;
                 }
                 return null; // Retorna null se não encontrou o usuário com o CPF especificado
@@ -292,7 +302,155 @@ public class PartidaAtualDAO {
 
     public void reset() throws SQLException{
         try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
-            PreparedStatement ps = con.prepareStatement("update partidaatual set adcazul = NULL, adcvermelho = NULL, campeonato = NULL, jungleazul = NULL, junglevermelho = NULL, midazul = NULL, midvermelho = NULL, suppazul = NULL, suppvermelho = NULL, topazul = NULL, topvermelho = NULL, timeazul = NULL, timevermelho = NULL, baronazul = NULL, baronvermelho = NULL, dragaoanciaoazul = NULL, dragaoanciaovermelho = NULL, dragaochemtechazul = NULL, dragaochemtechvermelho = NULL, dragaohextechazul = NULL, dragaohextechvermelho = NULL, dragaoinfernalazul = NULL, dragaoinfernalvermelho = NULL, dragaomontanhaazul = NULL, dragaomontanhavermelho = NULL, dragaooceanoazul = NULL, dragaooceanovermelho = NULL, pontosazul = NULL, pontosvermelho = NULL, dragaonuvemazul = NULL, dragaonuvemvermelho = NULL where id_partidaatual = 1")) {
+            PreparedStatement ps = con.prepareStatement("update partidaatual set adcazul = NULL, adcvermelho = NULL, campeonato = NULL, jungleazul = NULL, junglevermelho = NULL, midazul = NULL, midvermelho = NULL, suppazul = NULL, suppvermelho = NULL, topazul = NULL, topvermelho = NULL, timeazul = NULL, timevermelho = NULL, baronazul = NULL, baronvermelho = NULL, dragaoanciaoazul = NULL, dragaoanciaovermelho = NULL, dragaochemtechazul = NULL, dragaochemtechvermelho = NULL, dragaohextechazul = NULL, dragaohextechvermelho = NULL, dragaoinfernalazul = NULL, dragaoinfernalvermelho = NULL, dragaomontanhaazul = NULL, dragaomontanhavermelho = NULL, dragaooceanoazul = NULL, dragaooceanovermelho = NULL, dragaonuvemazul = NULL, dragaonuvemvermelho = NULL, pontosazul = 0, pontosvermelho = 0, pontosadcazul = 0, pontosadcvermelho = 0, pontosjungleazul = 0, pontosjunglevermelho = 0, pontosmidazul = 0, pontosmidvermelho = 0, pontossuppazul = 0, pontossuppvermelho = 0, pontostopazul = 0, pontostopvermelho = 0 where id_partidaatual = 1")) {
+            ps.execute();
+        }
+    }
+
+    public void pontoTopAzul() throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatual set pontostopazul = 1 where id_partidaatual = 1")) {
+            ps.execute();
+        }
+    }
+
+    public void pontoTopVermelhoReset() throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatual set pontostopvermelho = 0 where id_partidaatual = 1")) {
+            ps.execute();
+        }
+    }
+
+    public void pontoTopVermelho() throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatual set pontostopvermelho = 1 where id_partidaatual = 1")) {
+            ps.execute();
+        }
+    }
+
+    public void pontoTopAzulReset() throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatual set pontostopazul = 0 where id_partidaatual = 1")) {
+            ps.execute();
+        }
+    }
+
+    public void pontoJungleAzul() throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatual set pontosjungleazul = 1 where id_partidaatual = 1")) {
+            ps.execute();
+        }
+    }
+
+    public void pontoJungleVermelhoReset() throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatual set pontosjunglevermelho = 0 where id_partidaatual = 1")) {
+            ps.execute();
+        }
+    }
+
+    public void pontoJungleVermelho() throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatual set pontosjunglevermelho = 1 where id_partidaatual = 1")) {
+            ps.execute();
+        }
+        
+    }
+
+    public void pontoJungleAzulReset() throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatual set pontosjungleazul = 0 where id_partidaatual = 1")) {
+            ps.execute();
+        }
+    }
+
+    public void pontoMidAzul() throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatual set pontosmidazul = 1 where id_partidaatual = 1")) {
+            ps.execute();
+        }
+    }
+
+    public void pontoMidVermelhoReset() throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatual set pontosmidvermelho = 0 where id_partidaatual = 1")) {
+            ps.execute();
+        }
+    }
+
+    public void pontoMidVermelho() throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatual set pontosmidvermelho = 1 where id_partidaatual = 1")) {
+            ps.execute();
+        }
+    }
+
+    public void pontoMidAzulReset() throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatual set pontosmidazul = 0 where id_partidaatual = 1")) {
+            ps.execute();
+        }
+    }
+
+    public void pontoAdcAzul() throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatual set pontosadcazul = 1 where id_partidaatual = 1")) {
+            ps.execute();
+        }
+    }
+
+    public void pontoAdcVermelhoReset() throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatual set pontosadcvermelho = 0 where id_partidaatual = 1")) {
+            ps.execute();
+        }
+    }
+
+    public void pontoAdcVermelho() throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatual set pontosadcvermelho = 1 where id_partidaatual = 1")) {
+            ps.execute();
+        }
+    }
+
+    public void pontoAdcAzulReset() throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatual set pontosadcazul = 0 where id_partidaatual = 1")) {
+            ps.execute();
+        }
+    }
+
+    public void pontoSuppAzul() throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatual set pontossuppazul = 1 where id_partidaatual = 1")) {
+            ps.execute();
+        }
+    }
+
+    public void pontoSuppVermelhoReset() throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatual set pontossuppvermelho = 0 where id_partidaatual = 1")) {
+            ps.execute();
+        }
+    }
+
+    public void pontoSuppVermelho() throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatual set pontossuppvermelho = 1 where id_partidaatual = 1")) {
+            ps.execute();
+        }
+    }
+
+    public void pontoSuppAzulReset() throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatual set pontossuppazul = 0 where id_partidaatual = 1")) {
+            ps.execute();
+        }
+    }
+
+    public void pontosTotal() throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("update partidaatual set pontosazul = pontostopazul + pontosjungleazul + pontosmidazul + pontosadcazul + pontossuppazul, pontosvermelho = pontostopvermelho + pontosjunglevermelho + pontosmidvermelho + pontosadcvermelho + pontossuppvermelho where id_partidaatual = 1")) {
             ps.execute();
         }
     }
