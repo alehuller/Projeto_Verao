@@ -167,7 +167,7 @@ const options = [
     { value: "Zyra", text: "Zyra" }
 ];
 
-const teams = [
+const teamslck = [
     { value: "Dplus KIA", text: "Dplus KIA" },
     { value: "DRX", text: "DRX" },
     { value: "FearX", text: "FearX" },
@@ -180,6 +180,51 @@ const teams = [
     { value: "T1", text: "T1" }
 ];
 
+const teamslpl = [
+    { value: "Anyone's Legend", text: "Anyone's Legend" },
+    { value: "Bilibili Gaming", text: "Bilibili Gaming" },
+    { value: "EDward Gaming", text: "EDward Gaming" },
+    { value: "FunPlus Phoenix", text: "FunPlus Phoenix" },
+    { value: "Invictus Gaming", text: "Invictus Gaming" },
+    { value: "JD Gaming", text: "JD Gaming" },
+    { value: "LGD Gaming", text: "LGD Gaming" },
+    { value: "LNG Esports", text: "LNG Esports" },
+    { value: "Ninjas in Pyjamas", text: "Ninjas in Pyjamas" },
+    { value: "Oh My God", text: "Oh My God" },
+    { value: "Rare Atom", text: "Rare Atom" },
+    { value: "RNG", text: "RNG" },
+    { value: "Team WE", text: "Team WE" },
+    { value: "Top Esports", text: "Top Esports" },
+    { value: "TT Gaming", text: "TT Gaming" },
+    { value: "Ultra Prime", text: "Ultra Prime" },
+    { value: "Weibo Gaming", text: "Weibo Gaming" }
+];
+
+document.getElementById('campeonato').addEventListener('change', function() {
+    const campeonatoEscolhido = this.value;
+    let equipes;
+    if (campeonatoEscolhido === 'LPL') {
+        equipes = teamslpl;
+    } else if (campeonatoEscolhido === 'LCK') {
+        equipes = teamslck;
+    }
+
+    // Limpar opções existentes
+    clearSelectOptions('timeazul');
+    clearSelectOptions('timevermelho');
+
+    // Preencher com novas opções
+    populateSelect('timeazul', equipes);
+    populateSelect('timevermelho', equipes);
+});
+
+function clearSelectOptions(selectId) {
+    const select = document.getElementById(selectId);
+    while (select.firstChild) {
+        select.removeChild(select.firstChild);
+    }
+}
+
 function populateSelect(selectId, data) {
     const select = document.getElementById(selectId);
     data.forEach(item => {
@@ -189,3 +234,8 @@ function populateSelect(selectId, data) {
         select.appendChild(optionElement);
     });
 }
+
+// Preencher as seleções iniciais com os dados da LPL por padrão
+populateSelect('timeazul', teamslpl);
+populateSelect('timevermelho', teamslpl);
+

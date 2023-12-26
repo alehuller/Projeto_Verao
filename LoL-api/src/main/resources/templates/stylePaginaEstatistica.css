@@ -23,16 +23,22 @@ body {
     text-align: center;
 }
 
-
-.container-side {
+.container-side-azul, .container-side-vermelho {
     width: 20%;
     padding: 10px;
-    margin-top: 20px; 
-    background-color: transparent; 
-    box-shadow: none; 
+    margin-top: 20px;
+    background-color: transparent;
+    box-shadow: none;
     position: absolute;
-    left: 10px;
     top: 20px;
+}
+
+.container-side-azul {
+    left: 10px; 
+}
+
+.container-side-vermelho {
+    right: 10px; 
 }
 
 .azul {
@@ -43,8 +49,12 @@ body {
     color: red;
 }
 
-.container-dragoes, .container-barons {
-    margin-bottom: 15px;
+.container-dragoes {
+    margin-bottom: 30px; 
+}
+
+.container-barons {
+    margin-top: 30px; 
 }
 
 select, button {
@@ -55,6 +65,7 @@ select, button {
     border-radius: 4px;
     font-size: 0.8em; 
 }
+
 
 button {
     background-color: #007bff;
@@ -70,7 +81,7 @@ button:hover {
 
 .time-container {
     display: flex;
-    justify-content: space-around; /* Espaçamento uniforme entre os times */
+    justify-content: space-around;
 }
 
 .time-info {
@@ -78,7 +89,7 @@ button:hover {
 }
 
 .spacer {
-    width: 200px; /* Ajuste o valor conforme necessário para controlar o espaçamento entre os times */
+    width: 200px; 
 }
 
 #meuBotaoFinal {
