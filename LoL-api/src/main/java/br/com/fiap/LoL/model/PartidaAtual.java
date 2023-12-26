@@ -111,4 +111,34 @@ public class PartidaAtual {
 
     @Column(name = "DRAGAONUVEMVERMELHO")
     private String dragaoNuvemVermelho;
+
+    @Column(name = "PONTOSTOPAZUL")
+    private String pontosTopAzul;
+
+    @Column(name = "PONTOSTOPVERMELHO")
+    private String pontosTopVermelho;
+
+    @Column(name = "PONTOSJUNGLEAZUL")
+    private String pontosJungleAzul;
+
+    @Column(name = "PONTOSJUNGLEVERMELHO")
+    private String pontosJungleVermelho;
+
+    @Column(name = "PONTOSMIDAZUL")
+    private String pontosMidAzul;
+
+    @Column(name = "PONTOSMIDVERMELHO")
+    private String pontosMidVermelho;
+
+    @Column(name = "PONTOSADCAZUL")
+    private String pontosAdcAzul;
+
+    @Column(name = "PONTOSADCVERMELHO")
+    private String pontosAdcVermelho;
+
+    @Column(name = "PONTOSSUPPAZUL")
+    private String pontosSuppAzul;
+
+    @Column(name = "PONTOSSUPPVERMELHO")
+    private String pontosSuppVermelho;
 }
