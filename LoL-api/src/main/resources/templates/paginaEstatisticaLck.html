@@ -49,7 +49,7 @@
                         <form th:action="@{/pontoTopAzul}" method="post">
                             <button type="submit"><</button>
                         </form>
-                        <td th:text="${partidaAtual.pontosTopAzul}"></td>
+                        <td th:text="${partidaAtual.pontosTopAzul}"></td>             
                     </div>
                     <div class="container-champions">
                         <h4>Jungle</h4>
@@ -265,6 +265,26 @@
                                 <option value="5">5</option>
                             </select>
                             <button id="meuBotao" type="submit">Enviar</button>
+                        </form>
+                    </div>
+                    <br>
+                    <div class="container-itens">
+                        <h3 class="azul">Itens</h3>
+                        <h5>Enviar Item Um Top:</h5>
+                        <form th:action="@{/enviarItemTop}" method="post">
+                            <select id="itemtop" name="itemtop">
+                                <option value="Item Um Top">Item Um Top</option>               
+                                <option value="Item Dois Top">Item Dois Top</option>                           
+                                <option value="Item Tres Top">Item Tres Top</option>                           
+                                <option value="Item Quatro Top">Item Quatro Top</option>                           
+                                <option value="Item Cinco Top">Item Cinco Top</option>                         
+                                <option value="Item Seis Top">Item Seis Top</option>                                          
+                            </select>
+                            <select id="item" name="item">
+                                <option value="Dagger">Dagger</option>
+                                <option value="Kircheis Shard">Kircheis Shard</option>
+                            </select>
+                        <button id="Enviar Item Um Top" type="submit">Enviar Item Top</button>
                         </form>
                     </div>
                 </div>

@@ -281,4 +281,21 @@ public class ControllerGeral {
         partidaAtualDAO.pontosTotal();
         return "redirect:/paginaEstatisticaLck";
     }
+
+    @PostMapping("/enviarItemTop")
+    public String enviarItemUmTop(@ModelAttribute("itemtop") String itemTop, @ModelAttribute("item") String item) throws SQLException {
+        if("Item Um Top".equals(itemTop)) {
+        PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+        partidaAtualDAO.enviarItemUmTop(item);
+        return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Item Dois Top".equals(itemTop)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.enviarItemDoisTop(item);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else {
+            return "redirect:/paginaEstatisticaLck";
+        }
+    }
 }

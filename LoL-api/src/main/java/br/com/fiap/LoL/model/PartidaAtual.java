@@ -141,4 +141,22 @@ public class PartidaAtual {
 
     @Column(name = "PONTOSSUPPVERMELHO")
     private String pontosSuppVermelho;
+
+    @Column(name = "itemumtop")
+    private String itemUmTop;
+
+    @Column(name = "itemdoistop")
+    private String itemDoisTop;
+
+    @Column(name = "itemtrestop")
+    private String itemTresTop;
+
+    @Column(name = "itemquatrotop")
+    private String itemQuatroTop;
+
+    @Column(name = "itemcincotop")
+    private String itemCincoTop;
+
+    @Column(name = "itemseistop")
+    private String itemSeisTop;
 }

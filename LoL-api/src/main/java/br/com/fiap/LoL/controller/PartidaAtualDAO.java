@@ -76,6 +76,12 @@ public class PartidaAtualDAO {
                     partidaAtual.setPontosSuppVermelho(rs.getString("pontossuppvermelho"));
                     partidaAtual.setPontosTopAzul(rs.getString("pontostopazul"));
                     partidaAtual.setPontosTopVermelho(rs.getString("pontostopvermelho"));
+                    partidaAtual.setItemUmTop(rs.getString("itemumtop"));
+                    partidaAtual.setItemDoisTop(rs.getString("itemdoistop"));
+                    partidaAtual.setItemTresTop(rs.getString("itemtrestop"));
+                    partidaAtual.setItemQuatroTop(rs.getString("itemquatrotop"));
+                    partidaAtual.setItemCincoTop(rs.getString("itemcincotop"));
+                    partidaAtual.setItemSeisTop(rs.getString("itemseistop"));
                     return partidaAtual;
                 }
                 return null; // Retorna null se não encontrou o usuário com o CPF especificado
@@ -451,6 +457,22 @@ public class PartidaAtualDAO {
     public void pontosTotal() throws SQLException{
         try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
             PreparedStatement ps = con.prepareStatement("update partidaatual set pontosazul = pontostopazul + pontosjungleazul + pontosmidazul + pontosadcazul + pontossuppazul, pontosvermelho = pontostopvermelho + pontosjunglevermelho + pontosmidvermelho + pontosadcvermelho + pontossuppvermelho where id_partidaatual = 1")) {
+            ps.execute();
+        }
+    }
+
+    public void enviarItemUmTop(String itemUmTop) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatual set itemumtop = ? where id_partidaatual = 1")) {
+            ps.setString(1, itemUmTop);
+            ps.execute();
+        }
+    }
+
+    public void enviarItemDoisTop(String itemTop) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatual set itemdoistop = ? where id_partidaatual = 1")) {
+            ps.setString(1, itemTop);
             ps.execute();
         }
     }
