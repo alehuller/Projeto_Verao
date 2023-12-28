@@ -718,5 +718,245 @@ public class PartidaAtualDAO {
             ps.execute();
         }
     }
+
+    public void enviarItemUmTopVermelho(String item) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatualdois set itemumtopvermelho = ? where id_partidaatualdois = 1")) {
+            ps.setString(1, item);
+            ps.execute();
+        }
+    }
+
+    public void enviarItemDoisTopVermelho(String item) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatualdois set itemdoistopvermelho = ? where id_partidaatualdois = 1")) {
+            ps.setString(1, item);
+            ps.execute();
+        }
+    }
+
+    public void enviarItemTresTopVermelho(String item) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatualdois set itemtrestopvermelho = ? where id_partidaatualdois = 1")) {
+            ps.setString(1, item);
+            ps.execute();
+        }
+    }
+
+    public void enviarItemQuatroTopVermelho(String item) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatualdois set itemquatrotopvermelho = ? where id_partidaatualdois = 1")) {
+            ps.setString(1, item);
+            ps.execute();
+        }
+    }
+
+    public void enviarItemCincoTopVermelho(String item) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatual set itemcincotopvermelho = ? where id_partidaatual = 1")) {
+            ps.setString(1, item);
+            ps.execute();
+        }
+    }
+
+    public void enviarItemSeisTopVermelho(String item) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatualdois set itemseistopvermelho = ? where id_partidaatualdois = 1")) {
+            ps.setString(1, item);
+            ps.execute();
+        }
+    }
+
+    public void enviarItemUmJungleVermelho(String item) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatualdois set itemumjunglevermelho = ? where id_partidaatualdois = 1")) {
+            ps.setString(1, item);
+            ps.execute();
+        }
+    }
+
+    public void enviarItemDoisJungleVermelho(String item) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatual set itemdoisjunglevermelho = ? where id_partidaatual = 1")) {
+            ps.setString(1, item);
+            ps.execute();
+        }
+    }
+
+    public void enviarItemTresJungleVermelho(String item) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatualdois set itemtresjunglevermelho = ? where id_partidaatualdois = 1")) {
+            ps.setString(1, item);
+            ps.execute();
+        }
+    }
+
+    public void enviarItemQuatroJungleVermelho(String item) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatualdois set itemquatrojunglevermelho = ? where id_partidaatualdois = 1")) {
+            ps.setString(1, item);
+            ps.execute();
+        }
+    }
+
+    public void enviarItemCincoJungleVermelho(String item) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatual set itemcincojunglevermelho = ? where id_partidaatual = 1")) {
+            ps.setString(1, item);
+            ps.execute();
+        }
+    }
+
+    public void enviarItemSeisJungleVermelho(String item) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatualdois set itemseisjunglevermelho = ? where id_partidaatualdois = 1")) {
+            ps.setString(1, item);
+            ps.execute();
+        }
+    }
+
+    public void enviarItemUmMidVermelho(String item) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatualdois set itemummidvermelho = ? where id_partidaatualdois = 1")) {
+            ps.setString(1, item);
+            ps.execute();
+        }
+    }
+
+    public void enviarItemDoisMidVermelho(String item) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatual set itemdoismidvermelho = ? where id_partidaatual = 1")) {
+            ps.setString(1, item);
+            ps.execute();
+        }
+    }
+
+    public void enviarItemTresMidVermelho(String item) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatualdois set itemtresmidvermelho = ? where id_partidaatualdois = 1")) {
+            ps.setString(1, item);
+            ps.execute();
+        }
+    }
+
+    public void enviarItemQuatroMidVermelho(String item) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatualdois set itemquatromidvermelho = ? where id_partidaatualdois = 1")) {
+            ps.setString(1, item);
+            ps.execute();
+        }
+    }
+
+    public void enviarItemCincoMidVermelho(String item) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatual set itemcincomidvermelho = ? where id_partidaatual = 1")) {
+            ps.setString(1, item);
+            ps.execute();
+        }
+    }
+
+    public void enviarItemSeisMidVermelho(String item) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatualdois set itemseismidvermelho = ? where id_partidaatualdois = 1")) {
+            ps.setString(1, item);
+            ps.execute();
+        }
+    }
+
+    public void enviarItemUmAdcVermelho(String item) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatualdois set itemumadcvermelho = ? where id_partidaatualdois = 1")) {
+            ps.setString(1, item);
+            ps.execute();
+        }
+    }
+
+    public void enviarItemDoisAdcVermelho(String item) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatual set itemdoisadcvermelho = ? where id_partidaatual = 1")) {
+            ps.setString(1, item);
+            ps.execute();
+        }
+    }
+
+    public void enviarItemTresAdcVermelho(String item) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatualdois set itemtresadcvermelho = ? where id_partidaatualdois = 1")) {
+            ps.setString(1, item);
+            ps.execute();
+        }
+    }
+
+    public void enviarItemQuatroAdcVermelho(String item) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatualdois set itemquatroadcvermelho = ? where id_partidaatualdois = 1")) {
+            ps.setString(1, item);
+            ps.execute();
+        }
+    }
+
+    public void enviarItemCincoAdcVermelho(String item) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatual set itemcincoadcvermelho = ? where id_partidaatual = 1")) {
+            ps.setString(1, item);
+            ps.execute();
+        }
+    }
+
+    public void enviarItemSeisAdcVermelho(String item) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatualdois set itemseisadcvermelho = ? where id_partidaatualdois = 1")) {
+            ps.setString(1, item);
+            ps.execute();
+        }
+    }
+
+    public void enviarItemUmSuppVermelho(String item) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatualdois set itemumsuppvermelho = ? where id_partidaatualdois = 1")) {
+            ps.setString(1, item);
+            ps.execute();
+        }
+    }
+
+    public void enviarItemDoisSuppVermelho(String item) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatual set itemdoissuppvermelho = ? where id_partidaatual = 1")) {
+            ps.setString(1, item);
+            ps.execute();
+        }
+    }
+
+    public void enviarItemTresSuppVermelho(String item) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatualdois set itemtressuppvermelho = ? where id_partidaatualdois = 1")) {
+            ps.setString(1, item);
+            ps.execute();
+        }
+    }
+
+    public void enviarItemQuatroSuppVermelho(String item) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatualdois set itemquatrosuppvermelho = ? where id_partidaatualdois = 1")) {
+            ps.setString(1, item);
+            ps.execute();
+        }
+    }
+
+    public void enviarItemCincoSuppVermelho(String item) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatual set itemcincosuppvermelho = ? where id_partidaatual = 1")) {
+            ps.setString(1, item);
+            ps.execute();
+        }
+    }
+
+    public void enviarItemSeisSuppVermelho(String item) throws SQLException{
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement ps = con.prepareStatement("UPDATE partidaatualdois set itemseissuppvermelho = ? where id_partidaatualdois = 1")) {
+            ps.setString(1, item);
+            ps.execute();
+        }
+    }
     
 }

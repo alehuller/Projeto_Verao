@@ -466,4 +466,189 @@ public class ControllerGeral {
             return "redirect:/paginaEstatisticaLck";
         }
     }
+
+    @PostMapping("/enviarItemTopVermelho")
+    public String enviarItemUmTopVermelho(@ModelAttribute("itemtop") String itemTop, @ModelAttribute("item") String item) throws SQLException {
+        if("Item Um Top".equals(itemTop)) {
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.enviarItemUmTopVermelho(item);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Item Dois Top".equals(itemTop)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.enviarItemDoisTopVermelho(item);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Item Tres Top".equals(itemTop)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.enviarItemTresTopVermelho(item);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Item Quatro Top".equals(itemTop)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.enviarItemQuatroTopVermelho(item);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Item Cinco Top".equals(itemTop)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.enviarItemCincoTopVermelho(item);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Item Seis Top".equals(itemTop)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.enviarItemSeisTopVermelho(item);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else {
+            return "redirect:/paginaEstatisticaLck";
+        }
+    }
+
+    @PostMapping("/enviarItemJungleVermelho")
+    public String enviarItemUmJungleVermelho(@ModelAttribute("itemjungle") String itemJungle, @ModelAttribute("item") String item) throws SQLException {
+        if("Item Um Jungle".equals(itemJungle)) {
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.enviarItemUmJungleVermelho(item);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Item Dois Jungle".equals(itemJungle)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.enviarItemDoisJungleVermelho(item);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Item Tres Jungle".equals(itemJungle)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.enviarItemTresJungleVermelho(item);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Item Quatro Jungle".equals(itemJungle)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.enviarItemQuatroJungleVermelho(item);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Item Cinco Jungle".equals(itemJungle)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.enviarItemCincoJungleVermelho(item);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Item Seis Jungle".equals(itemJungle)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.enviarItemSeisJungleVermelho(item);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else {
+            return "redirect:/paginaEstatisticaLck";
+        }
+    }
+
+    @PostMapping("/enviarItemMidVermelho")
+    public String enviarItemUmMidVermelho(@ModelAttribute("itemmid") String itemMid, @ModelAttribute("item") String item) throws SQLException {
+        if("Item Um Mid".equals(itemMid)) {
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.enviarItemUmMidVermelho(item);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Item Dois Mid".equals(itemMid)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.enviarItemDoisMidVermelho(item);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Item Tres Mid".equals(itemMid)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.enviarItemTresMidVermelho(item);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Item Quatro Mid".equals(itemMid)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.enviarItemQuatroMidVermelho(item);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Item Cinco Mid".equals(itemMid)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.enviarItemCincoMidVermelho(item);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Item Seis Mid".equals(itemMid)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.enviarItemSeisMidVermelho(item);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else {
+            return "redirect:/paginaEstatisticaLck";
+        }
+    }
+
+    @PostMapping("/enviarItemAdcVermelho")
+    public String enviarItemUmAdcVermelho(@ModelAttribute("itemadc") String itemAdc, @ModelAttribute("item") String item) throws SQLException {
+        if("Item Um Adc".equals(itemAdc)) {
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.enviarItemUmAdcVermelho(item);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Item Dois Adc".equals(itemAdc)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.enviarItemDoisAdcVermelho(item);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Item Tres Adc".equals(itemAdc)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.enviarItemTresAdcVermelho(item);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Item Quatro Adc".equals(itemAdc)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.enviarItemQuatroAdcVermelho(item);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Item Cinco Adc".equals(itemAdc)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.enviarItemCincoAdcVermelho(item);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Item Seis Adc".equals(itemAdc)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.enviarItemSeisAdcVermelho(item);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else {
+            return "redirect:/paginaEstatisticaLck";
+        }
+    }
+
+    @PostMapping("/enviarItemSuppVermelho")
+    public String enviarItemUmSuppVermelho(@ModelAttribute("itemsupp") String itemSupp, @ModelAttribute("item") String item) throws SQLException {
+        if("Item Um Supp".equals(itemSupp)) {
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.enviarItemUmSuppVermelho(item);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Item Dois Supp".equals(itemSupp)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.enviarItemDoisSuppVermelho(item);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Item Tres Supp".equals(itemSupp)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.enviarItemTresSuppVermelho(item);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Item Quatro Supp".equals(itemSupp)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.enviarItemQuatroSuppVermelho(item);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Item Cinco Supp".equals(itemSupp)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.enviarItemCincoSuppVermelho(item);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else if ("Item Seis Supp".equals(itemSupp)){
+            PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+            partidaAtualDAO.enviarItemSeisSuppVermelho(item);
+            return "redirect:/paginaEstatisticaLck";
+        }
+        else {
+            return "redirect:/paginaEstatisticaLck";
+        }
+    }
 }

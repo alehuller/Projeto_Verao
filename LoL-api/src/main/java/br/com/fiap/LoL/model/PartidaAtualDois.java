@@ -77,6 +77,9 @@ public class PartidaAtualDois {
     @Column(name = "ITEMUMTOPVERMELHO")
     private String ItemUmTopVermelho;
 
+    @Column(name = "ITEMDOISTOPVERMELHO")
+    private String ItemDoisTopVermelho;
+
     @Column(name = "ITEMTRESTOPVERMELHO")
     private String ItemTresTopVermelho;
 
