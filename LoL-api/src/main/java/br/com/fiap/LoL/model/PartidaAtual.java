@@ -159,4 +159,55 @@ public class PartidaAtual {
 
     @Column(name = "itemseistop")
     private String itemSeisTop;
+
+    @Column(name = "ITEMDOISJUNGLEAZUL")
+    private String ItemDoisJungleAzul;
+
+    @Column(name = "ITEMCINCOJUNGLEAZUL")
+    private String ItemCincoJungleAzul;
+
+    @Column(name = "ITEMDOISMIDAZUL")
+    private String ItemDoisMidAzul;
+
+    @Column(name = "ITEMCINCOMIDAZUL")
+    private String ItemCincoMidAzul;
+
+    @Column(name = "ITEMDOISADCAZUL")
+    private String ItemDoisAdcAzul;
+
+    @Column(name = "ITEMCINCOADCAZUL")
+    private String ItemCincoAdcAzul;
+
+    @Column(name = "ITEMDOISSUPPAZUL")
+    private String ItemDoisSuppAzul;
+
+    @Column(name = "ITEMCINCOSUPPAZUL")
+    private String ItemCincoSuppAzul;
+
+    @Column(name = "ITEMCINCOTOPVERMELHO")
+    private String ItemCincoTopVermelho;
+
+    @Column(name = "ITEMDOISJUNGLEVERMELHO")
+    private String ItemDoisJungleVermelho;
+
+    @Column(name = "ITEMCINCOJUNGLEVERMELHO")
+    private String ItemCincoJungleVermelho;
+
+    @Column(name = "ITEMDOISMIDVERMELHO")
+    private String ItemDoisMidVermelho;
+
+    @Column(name = "ITEMCINCOMIDVERMELHO")
+    private String ItemCincoMidVermelho;
+
+    @Column(name = "ITEMDOISADCVERMELHO")
+    private String ItemDoisAdcVermelho;
+
+    @Column(name = "ITEMCINCOADCVERMELHO")
+    private String ItemCincoAdcVermelho;
+
+    @Column(name = "ITEMDOISSUPPVERMELHO")
+    private String ItemDoisSuppVermelho;
+
+    @Column(name = "ITEMCINCOSUPPVERMELHO")
+    private String ItemCincoSuppVermelho;
 }
