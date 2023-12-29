@@ -192,6 +192,13 @@ public class ControllerGeral {
         return "redirect:/paginaEstatisticaLck";
     }
 
+    @PostMapping("/resetDois")
+    public String resetDois() throws SQLException {
+        PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+        partidaAtualDAO.resetDois();
+        return "redirect:/paginaEstatisticaLck";
+    }
+
     @PostMapping("/pontoTopAzul")
     public String pontoTopAzul() throws SQLException {
         PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
