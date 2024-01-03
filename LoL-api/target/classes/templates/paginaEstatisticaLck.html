@@ -262,7 +262,9 @@
                     </div>
                 </div>
                 <br></br>
-                <button id="meuBotaoFinal">Registrar Partida</button>
+                <form th:action="@{/registrarPartida}" method="post">
+                    <button id="meuBotaoFinal" type="submit">Registrar Partida</button>
+                </form>
                 <br></br>
                 <form th:action="@{/reset}" method="post">
                     <button id="meuBotaoFinal" type="submit">Terminar Partida</button>

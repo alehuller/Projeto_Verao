@@ -2,10 +2,13 @@ package br.com.fiap.LoL.controller;
 
 import java.sql.SQLException;
 
+import org.springframework.data.repository.query.parser.Part;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import br.com.fiap.LoL.model.PartidaAtual;
 
 @Controller
 public class ControllerGeral {
@@ -657,5 +660,16 @@ public class ControllerGeral {
         else {
             return "redirect:/paginaEstatisticaLck";
         }
+    }
+
+    @PostMapping("/registrarPartida")
+    public String registrarPartida() throws SQLException {
+        PartidaAtualDAO partidaAtualDAO = new PartidaAtualDAO();
+        PartidaAtual PartidaAtual = partidaAtualDAO.pegarTudo();
+
+        PartidaRegistradaDAO partidaRegistradaDAO = new PartidaRegistradaDAO();
+        Long id = partidaRegistradaDAO.pegarUltimoId();
+        partidaRegistradaDAO.enviarPartida(PartidaAtual, id);
+        return "redirect:/paginaEstatisticaLck";
     }
 }
