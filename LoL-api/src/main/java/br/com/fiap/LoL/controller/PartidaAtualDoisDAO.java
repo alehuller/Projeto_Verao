@@ -14,7 +14,7 @@ import br.com.fiap.LoL.model.PartidaAtualDois;
 @Repository
 public class PartidaAtualDoisDAO {
 
-    private static final String URL = "jdbc:mysql://localhost:3306/projeto_verao";
+    private static final String URL = "jdbc:mysql://localhost:3307/LoL";
     private static final String USER = "root";
     private static final String PASSWORD = "admin1234";
     
